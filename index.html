@@ -1,149 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formationprot | Agence Digitale & Formations Professionnelles</title>
-  <meta name="description" content="Formationprot : création sites web, applications web/mobile/desktop, marketing digital, maintenance informatique et formations professionnelles." />
-  <link rel="icon" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="style.css?v=2" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formationprot | Digital, Formations & Solutions Pro</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+.header{position:sticky;top:0;z-index:99;background:rgba(5,12,25,.95);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#0ea5e9,#2563eb);display:grid;place-items:center;font-size:24px;box-shadow:0 10px 30px rgba(37,99,235,.4)}
+.brand small{display:block;color:#9fb3c8;font-size:12px}
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{color:#dbeafe;font-weight:600}
+.whatsapp,.btn{background:#10b981;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;display:inline-block}
+.hero{min-height:92vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(7,17,31,.96),rgba(30,27,75,.88)),url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80') center/cover}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:rgba(14,165,233,.18);border:1px solid rgba(125,211,252,.3);padding:10px 18px;border-radius:999px;color:#bae6fd;font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(38px,6vw,76px);line-height:1.05;margin-bottom:22px}
+.hero p{font-size:20px;color:#cbd5e1;max-width:650px}
+.actions{display:flex;gap:14px;margin:30px 0;flex-wrap:wrap}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.25)}
+.stats{display:flex;gap:18px;flex-wrap:wrap}
+.stats div,.panel,.card,.project,.contact-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:24px}
+.stats div{padding:18px 24px}.stats strong{font-size:28px;display:block;color:#7dd3fc}
+.panel{padding:24px;animation:float 4s ease-in-out infinite}
+.panel img{width:100%;border-radius:20px;opacity:.9}
+@keyframes float{50%{transform:translateY(-16px)}}
+.section{padding:90px 0}
+.title{text-align:center;margin-bottom:50px}.title span{color:#38bdf8;font-weight:800}.title h2{font-size:42px;margin:10px 0}.title p{color:#cbd5e1}
+.cards,.demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card,.project{padding:26px;transition:.3s}.card:hover,.project:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(14,165,233,.18)}
+.icon{font-size:38px;margin-bottom:15px}.card h3,.project h3{font-size:22px;margin-bottom:10px}.card p,.project p{color:#cbd5e1}
+.dark{background:#0f172a}
+.training{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.training div{background:#111c32;padding:18px;border-radius:16px}
+.filters{text-align:center;margin-bottom:30px}.filters button{border:0;margin:5px;padding:12px 18px;border-radius:999px;background:#1e293b;color:white;font-weight:700;cursor:pointer}.filters button.active{background:#2563eb}
+.project-img{height:150px;border-radius:18px;background:linear-gradient(135deg,#2563eb,#06b6d4);display:flex;align-items:end;padding:18px;font-weight:900;margin-bottom:18px}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:34px}
+input,select,textarea{width:100%;margin-bottom:14px;padding:15px;border-radius:14px;border:1px solid rgba(255,255,255,.15);background:#0b1220;color:#fff}
+textarea{min-height:120px}
+footer{text-align:center;padding:30px;background:#030712;color:#94a3b8}
+.float-wa{position:fixed;right:24px;bottom:24px;width:58px;height:58px;border-radius:50%;background:#10b981;display:grid;place-items:center;font-size:26px;box-shadow:0 15px 35px rgba(16,185,129,.45)}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero-grid,.contact-box{grid-template-columns:1fr}.menu{display:none;position:absolute;top:86px;left:0;right:0;background:#07111f;padding:20px;flex-direction:column}.menu.open{display:flex}.menu-btn{display:block}.panel{display:none}}
+@media(min-width:851px){.menu-btn{display:none}}
+</style>
 </head>
 <body>
-  <div class="loader" id="loader"><div class="loader-logo">FP</div></div>
 
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#accueil" aria-label="Formationprot accueil">
-        <span class="brand-mark">FP</span>
-        <span class="brand-text"><strong>Formation<span>prot</span></strong><small>Digital • Formation • Solutions</small></span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-      <nav class="menu" id="menu">
-        <a href="#accueil">Accueil</a>
-        <a href="#services">Services</a>
-        <a href="#formations">Formations</a>
-        <a href="#demos">Démos</a>
-        <a href="#contact">Contact</a>
-        <a class="whatsapp" href="https://wa.me/216XXXXXXXX" target="_blank">WhatsApp</a>
-      </nav>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="logo">FP</div>
+      <div>Formationprot<small>Digital • Formation • Solutions</small></div>
+    </a>
+    <button class="menu-btn" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+    <nav class="menu">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#formations">Formations</a>
+      <a href="#demos">Démos</a>
+      <a href="#contact">Contact</a>
+      <a class="whatsapp" href="https://wa.me/216XXXXXXXX">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<section id="accueil" class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="badge">🚀 Agence digitale + centre de formation</span>
+      <h1>Créez une présence digitale professionnelle pour votre entreprise.</h1>
+      <p>Sites web, applications web/mobile/desktop, marketing digital, maintenance informatique et formations professionnelles.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Demander un devis</a>
+        <a class="btn secondary" href="#demos">Voir les démos</a>
+      </div>
+      <div class="stats">
+        <div><strong>8+</strong><span>Services</span></div>
+        <div><strong>100%</strong><span>Responsive</span></div>
+        <div><strong>Pro</strong><span>Design moderne</span></div>
+      </div>
     </div>
-  </header>
+    <div class="panel reveal">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section id="accueil" class="hero">
-      <div class="slider" id="slider">
-        <div class="slide active" style="--bg:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80')"></div>
-        <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80')"></div>
-        <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')"></div>
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="badge">🚀 Agence digitale + centre de formation</span>
-          <h1>Créez une présence digitale professionnelle pour votre entreprise.</h1>
-          <p>Sites web, applications web/mobile/desktop, marketing digital, maintenance informatique et formations professionnelles.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Demander un devis</a>
-            <a class="btn secondary" href="#demos">Voir les démos</a>
+<section id="services" class="section">
+  <div class="container">
+    <div class="title reveal"><span>Nos services</span><h2>Solutions digitales complètes</h2><p>Formationprot vous accompagne de A à Z.</p></div>
+    <div class="cards">
+      <div class="card reveal"><div class="icon">🌐</div><h3>Sites web</h3><p>Sites vitrines, landing pages, portfolios, SEO local.</p></div>
+      <div class="card reveal"><div class="icon">🛒</div><h3>E-commerce</h3><p>Boutiques, catalogues, commandes et conversion.</p></div>
+      <div class="card reveal"><div class="icon">⚙️</div><h3>Applications web</h3><p>Dashboards, CRM, SaaS et outils internes.</p></div>
+      <div class="card reveal"><div class="icon">📱</div><h3>Applications mobile</h3><p>Android/iOS, réservation, espace client.</p></div>
+      <div class="card reveal"><div class="icon">🖥️</div><h3>Applications desktop</h3><p>Stock, facturation, caisse et rapports.</p></div>
+      <div class="card reveal"><div class="icon">📣</div><h3>Marketing digital</h3><p>Réseaux sociaux, publicité et identité visuelle.</p></div>
+      <div class="card reveal"><div class="icon">🛠️</div><h3>Maintenance</h3><p>Dépannage, optimisation PC, réseau et assistance.</p></div>
+      <div class="card reveal"><div class="icon">🎓</div><h3>Formations pro</h3><p>Informatique, bureautique, web, digital.</p></div>
+    </div>
+  </div>
+</section>
 
-          
-          </div>
-          <div class="stats">
-            <div><strong>8+</strong><span>Services digitaux</span></div>
-            <div><strong>100%</strong><span>Responsive</span></div>
-            <div><strong>Pro</strong><span>Design moderne</span></div>
-          </div>
-        </div>
-        <div class="hero-panel reveal delay">
-          <div class="panel-top"><span></span><span></span><span></span></div>
-          <div class="panel-screen">
-            <div class="mini-card up">📈 Marketing digital</div>
-            <div class="device-laptop"><div></div></div>
-            <div class="mini-card down">💻 Web • Mobile • Desktop</div>
-          </div>
-        </div>
-      </div>
-      <div class="slider-controls">
-        <button class="dot active" data-slide="0"></button>
-        <button class="dot" data-slide="1"></button>
-        <button class="dot" data-slide="2"></button>
-      </div>
-    </section>
+<section id="formations" class="section dark">
+  <div class="container">
+    <div class="title reveal"><span>Formations</span><h2>Formations pratiques orientées métier</h2></div>
+    <div class="training reveal">
+      <div>✅ Développement web</div>
+      <div>✅ Bureautique professionnelle</div>
+      <div>✅ Marketing digital</div>
+      <div>✅ Design & outils numériques</div>
+      <div>✅ Maintenance informatique</div>
+      <div>✅ Gestion entreprise</div>
+    </div>
+  </div>
+</section>
 
-    <section class="ticker"><div><span>Sites vitrines</span><span>E-commerce</span><span>Applications web</span><span>Applications mobile</span><span>Applications desktop</span><span>Marketing digital</span><span>Formations pro</span><span>Maintenance</span></div></section>
+<section id="demos" class="section">
+  <div class="container">
+    <div class="title reveal"><span>Démos & travaux</span><h2>Exemples de réalisations</h2></div>
+    <div class="filters reveal">
+      <button class="active" onclick="filterProjects('all',this)">Tout</button>
+      <button onclick="filterProjects('web',this)">Web</button>
+      <button onclick="filterProjects('app',this)">Applications</button>
+      <button onclick="filterProjects('marketing',this)">Marketing</button>
+    </div>
+    <div class="demo-grid">
+      <div class="project reveal" data-cat="web"><div class="project-img">Site vitrine</div><h3>Site vitrine entreprise</h3><p>Accueil, services, contact, WhatsApp.</p><a href="site-vitrine.html">Voir la démo →</a></div>
+      <div class="project reveal" data-cat="web"><div class="project-img">E-commerce</div><h3>Boutique en ligne</h3><p>Catalogue produits et commande.</p><a href="ecommerce.html">Voir la démo →</a></div>
+      <div class="project reveal" data-cat="app"><div class="project-img">Web App</div><h3>Application web</h3><p>Dashboard, clients, statistiques.</p><a href="application-web.html">Voir la démo →</a></div>
+      <div class="project reveal" data-cat="app"><div class="project-img">Mobile</div><h3>Application mobile</h3><p>Réservation et notifications.</p><a href="application-mobile.html">Voir la démo →</a></div>
+      <div class="project reveal" data-cat="app"><div class="project-img">Desktop</div><h3>Application desktop</h3><p>Gestion, caisse et stock.</p><a href="application-desktop.html">Voir la démo →</a></div>
+      <div class="project reveal" data-cat="marketing"><div class="project-img">Marketing</div><h3>Campagne digitale</h3><p>Visibilité, réseaux sociaux, publicité.</p><a href="marketing-digital.html">Voir la démo →</a></div>
+    </div>
+  </div>
+</section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-title reveal"><span>Nos services</span><h2>Solutions digitales complètes</h2><p>Un site moderne, une application, une campagne digitale ou une formation : Formationprot vous accompagne de A à Z.</p></div>
-        <div class="cards">
-          <article class="card reveal"><div class="icon">🌐</div><h3>Sites web</h3><p>Sites vitrines, landing pages, portfolios, sites d'entreprise et SEO local.</p></article>
-          <article class="card reveal"><div class="icon">🛒</div><h3>E-commerce</h3><p>Boutiques, catalogues, commandes, paiement et tunnel de conversion.</p></article>
-          <article class="card reveal"><div class="icon">⚙️</div><h3>Applications web</h3><p>Dashboards, CRM, plateformes de gestion, SaaS et outils internes.</p></article>
-          <article class="card reveal"><div class="icon">📱</div><h3>Applications mobile</h3><p>Applications Android/iOS, espace client, notifications et réservation.</p></article>
-          <article class="card reveal"><div class="icon">🖥️</div><h3>Applications desktop</h3><p>Logiciels bureau : stock, facturation, caisse, gestion et rapports.</p></article>
-          <article class="card reveal"><div class="icon">📣</div><h3>Marketing digital</h3><p>Réseaux sociaux, publicité, identité visuelle, contenu et visibilité locale.</p></article>
-          <article class="card reveal"><div class="icon">🛠️</div><h3>Maintenance informatique</h3><p>Dépannage, installation, optimisation PC, réseau et assistance entreprise.</p></article>
-          <article class="card reveal"><div class="icon">🎓</div><h3>Formations pro</h3><p>Informatique, bureautique, développement, digital et outils modernes.</p></article>
-        </div>
-      </div>
-    </section>
+<section id="contact" class="section dark">
+  <div class="container contact-box reveal">
+    <div>
+      <span class="badge">Contact</span>
+      <h2>Prêt à lancer votre projet ?</h2>
+      <p>Envoyez-nous votre besoin : site web, application, marketing, maintenance ou formation.</p>
+    </div>
+    <form onsubmit="sendWhatsApp(event)">
+      <input id="name" required placeholder="Votre nom">
+      <select id="service">
+        <option>Site web</option><option>Application web</option><option>Application mobile</option><option>Application desktop</option><option>Marketing digital</option><option>Formation professionnelle</option>
+      </select>
+      <textarea id="message" required placeholder="Votre message"></textarea>
+      <button class="btn" type="submit">Envoyer sur WhatsApp</button>
+    </form>
+  </div>
+</section>
 
-    <section id="formations" class="section dark">
-      <div class="container split">
-        <div class="section-title left reveal"><span>Formations</span><h2>Des formations pratiques et orientées métier</h2><p>Programmes adaptés aux étudiants, employés, entrepreneurs, centres de formation et entreprises.</p><a class="btn primary" href="#contact">Demander le programme</a></div>
-        <div class="training reveal delay"><div>✅ Développement web</div><div>✅ Bureautique professionnelle</div><div>✅ Marketing digital</div><div>✅ Design & outils numériques</div><div>✅ Maintenance informatique</div><div>✅ Gestion entreprise</div></div>
-      </div>
-    </section>
+<a class="float-wa" href="https://wa.me/216XXXXXXXX">💬</a>
+<footer>© 2026 Formationprot — Digital • Formation • Solutions</footer>
 
-    <section id="demos" class="section demos-section">
-      <div class="container">
-        <div class="section-title reveal"><span>Démos & travaux</span><h2>Exemples attractifs de réalisations</h2><p>Filtre les projets par type et clique sur “Voir la démo”. Tu peux ajouter tes propres travaux facilement.</p></div>
-        <div class="demo-filters reveal">
-          <button class="filter-btn active" data-filter="all">Tout</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="app">Applications</button>
-          <button class="filter-btn" data-filter="marketing">Marketing</button>
-          <button class="filter-btn" data-filter="formation">Formations</button>
-        </div>
-        <div class="demo-grid">
-          <article class="project reveal" data-category="web"><div class="project-img img-web"><span>Site vitrine</span></div><h3>Site vitrine entreprise</h3><p>Page accueil, services, contact, WhatsApp et SEO local.</p><a href="demos/site-vitrine.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="web"><div class="project-img img-shop"><span>E-commerce</span></div><h3>Boutique en ligne</h3><p>Catalogue, produits, panier visuel et commande.</p><a href="demos/ecommerce.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="app"><div class="project-img img-dashboard"><span>Web app</span></div><h3>Application de gestion</h3><p>Dashboard clients, formations, paiements et statistiques.</p><a href="demos/application-web.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="app"><div class="project-img img-mobile"><span>Mobile</span></div><h3>Application mobile</h3><p>Réservation, notifications, espace client et planning.</p><a href="demos/application-mobile.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="app"><div class="project-img img-desktop"><span>Desktop</span></div><h3>Application desktop</h3><p>Stock, facturation, caisse et rapports imprimables.</p><a href="demos/application-desktop.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="marketing"><div class="project-img img-marketing"><span>Marketing</span></div><h3>Campagne digitale</h3><p>Réseaux sociaux, design, publicité et stratégie locale.</p><a href="demos/marketing-digital.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="formation"><div class="project-img img-training"><span>Formation</span></div><h3>Programme formation</h3><p>Modules, planning, niveaux, objectifs et certificat.</p><a href="demos/formations.html">Voir la démo →</a></article>
-          <article class="project reveal" data-category="web"><div class="project-img img-maintenance"><span>Maintenance</span></div><h3>Maintenance informatique</h3><p>Assistance, réseau, PC, installation et dépannage.</p><a href="demos/maintenance.html">Voir la démo →</a></article>
-        </div>
-      </div>
-    </section>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+function show(){reveals.forEach(e=>{if(e.getBoundingClientRect().top<innerHeight-80)e.classList.add('show')})}
+addEventListener('scroll',show);show();
 
-    <section class="section guide">
-      <div class="container">
-        <div class="section-title reveal"><span>Modifier le site</span><h2>Comment ajouter tes démos après ?</h2></div>
-        <div class="steps reveal">
-          <div><b>1</b><h3>Copie une carte démo</h3><p>Dans <code>index.html</code>, cherche <code>&lt;section id="demos"</code> puis copie un bloc <code>&lt;article class="project"&gt;</code>.</p></div>
-          <div><b>2</b><h3>Change le texte</h3><p>Remplace le titre, la description, la catégorie <code>data-category</code> et le lien vers ta page.</p></div>
-          <div><b>3</b><h3>Ajoute une page</h3><p>Crée un fichier dans <code>demos/mon-projet.html</code> ou copie une page existante et modifie son contenu.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="container contact-box reveal">
-        <div><span class="badge">Contact</span><h2>Prêt à lancer votre projet ?</h2><p>Envoyez-nous votre besoin : site web, application, marketing, maintenance ou formation.</p></div>
-        <form onsubmit="sendWhatsApp(event)">
-          <input id="name" required placeholder="Votre nom" />
-          <select id="service"><option>Site web</option><option>Application web</option><option>Application mobile</option><option>Application desktop</option><option>Marketing digital</option><option>Formation professionnelle</option><option>Maintenance informatique</option></select>
-          <textarea id="message" required placeholder="Votre message"></textarea>
-          <button class="btn primary" type="submit">Envoyer sur WhatsApp</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <a class="float-wa" href="https://wa.me/216XXXXXXXX" target="_blank">💬</a>
-  <footer><div class="container">© 2026 Formationprot — Digital • Formation • Solutions</div></footer>
-  <script src="script.js"></script>
+function filterProjects(cat,btn){
+ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');
+ document.querySelectorAll('.project').forEach(p=>{
+  p.style.display=(cat==='all'||p.dataset.cat===cat)?'block':'none';
+ });
+}
+function sendWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const service=document.getElementById('service').value;
+ const msg=document.getElementById('message').value;
+ const text=`Bonjour Formationprot, je suis ${name}. Service: ${service}. Message: ${msg}`;
+ window.open('https://wa.me/216XXXXXXXX?text='+encodeURIComponent(text),'_blank');
+}
+</script>
 </body>
 </html>
