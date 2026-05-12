@@ -5,7 +5,7 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#020824;
   color:white;
 }
@@ -16,27 +16,27 @@ a{
 
 .header{
   position:fixed;
+  width:100%;
   top:0;
   left:0;
-  width:100%;
   z-index:1000;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.6);
   backdrop-filter:blur(10px);
 }
 
 .nav{
   max-width:1200px;
   margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
   padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
   color:white;
   font-size:28px;
   font-weight:bold;
@@ -61,7 +61,7 @@ a{
 
 .whatsapp-btn{
   background:#25D366;
-  padding:12px 24px;
+  padding:14px 24px;
   border-radius:30px;
   color:white;
 }
@@ -73,9 +73,9 @@ a{
   justify-content:center;
   padding:140px 20px 80px;
   background:
-    radial-gradient(circle at left,#123b8a 0%,transparent 35%),
-    radial-gradient(circle at right,#35126f 0%,transparent 35%),
-    #020824;
+  radial-gradient(circle at left,#123b8a 0%,transparent 35%),
+  radial-gradient(circle at right,#35126f 0%,transparent 35%),
+  #020824;
 }
 
 .hero-content{
@@ -89,13 +89,13 @@ a{
 }
 
 .hero h1 span{
-  color:#25b9ff;
+  color:#22d3ee;
 }
 
 .hero p{
   font-size:22px;
   line-height:1.8;
-  color:#c7d2fe;
+  color:#cbd5e1;
 }
 
 .section{
@@ -108,9 +108,9 @@ a{
 }
 
 .section-title{
+  text-align:center;
   font-size:52px;
   margin-bottom:60px;
-  text-align:center;
 }
 
 .demos-grid{
@@ -121,11 +121,11 @@ a{
 
 .demo-card{
   display:block;
-  overflow:hidden;
+  background:#0b1238;
   border-radius:30px;
-  background:#0d133d;
-  border:1px solid rgba(255,255,255,0.08);
+  overflow:hidden;
   transition:0.4s;
+  border:1px solid rgba(255,255,255,0.1);
 }
 
 .demo-card:hover{
@@ -143,7 +143,7 @@ a{
 }
 
 .demo-content h3{
-  font-size:38px;
+  font-size:36px;
   margin-bottom:20px;
 }
 
@@ -166,25 +166,6 @@ a{
   background:#060b2f;
 }
 
-.footer a{
-  color:#22d3ee;
-}
-
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-
-
-
-/* MENU MOBILE */
-
 .menu-toggle{
   display:none;
   background:none;
@@ -194,9 +175,9 @@ a{
   cursor:pointer;
 }
 
-
-
-/* RESPONSIVE */
+.reveal{
+  opacity:1;
+}
 
 @media(max-width:768px){
 
@@ -213,19 +194,15 @@ a{
     background:#020824;
     flex-direction:column;
     padding:30px;
-    gap:25px;
+    gap:20px;
   }
 
   .menu.active{
     display:flex;
   }
 
-  .hero{
-    padding-top:160px;
-  }
-
   .hero h1{
-    font-size:54px;
+    font-size:50px;
   }
 
   .hero p{
@@ -236,7 +213,4 @@ a{
     font-size:38px;
   }
 
-  .demo-content h3{
-    font-size:30px;
-  }
 }
