@@ -1,422 +1,247 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Formationprot — Création de sites web, applications, e-commerce, marketing digital et formations professionnelles en Tunisie." />
-  <title>Formationprot — Digital • Formation • Solutions</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>Formationprot</title>
 
-  <style>
-    :root{
-      --bg:#020617;
-      --bg-soft:#0f172a;
-      --blue:#2563eb;
-      --cyan:#06b6d4;
-      --purple:#7c3aed;
-      --green:#22c55e;
-      --text:#ffffff;
-      --muted:#cbd5e1;
-      --muted-2:#94a3b8;
-      --border:rgba(255,255,255,.12);
-      --glass:rgba(255,255,255,.065);
-      --shadow:0 24px 80px rgba(0,0,0,.35);
-    }
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+<body>
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
-    }
+  <!-- HEADER -->
 
-    body::before,
-    body::after{
-      content:"";
-      position:fixed;
-      width:420px;
-      height:420px;
-      border-radius:50%;
-      filter:blur(120px);
-      opacity:.45;
-      pointer-events:none;
-      z-index:-3;
-    }
+  <header class="header">
 
-    body::before{
-      background:var(--blue);
-      top:8%;
-      left:-160px;
-    }
+    <nav class="nav">
 
-    body::after{
-      background:var(--purple);
-      right:-170px;
-      bottom:5%;
-    }
-
-    .video-bg{
-      position:fixed;
-      inset:0;
-      z-index:-4;
-      overflow:hidden;
-    }
-
-    .video-bg video{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      filter:brightness(.23) saturate(1.15);
-    }
-
-    .overlay{
-      position:fixed;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(37,99,235,.24), transparent 30%),
-        radial-gradient(circle at 80% 80%, rgba(124,58,237,.22), transparent 28%),
-        linear-gradient(120deg, rgba(2,6,23,.95), rgba(2,6,23,.74), rgba(2,6,23,.96));
-      z-index:-2;
-    }
-
-    a{text-decoration:none;color:inherit;}
-    img{max-width:100%;display:block;}
-
-   <header class="header">
-
-  <nav class="nav">
-
-    <a href="#" class="logo">
-      <span>FP</span>
-      Formationprot
-    </a>
-
-    <button class="menu-toggle" id="menu-toggle">
-      ☰
-    </button>
-
-    <div class="menu" id="mobile-menu">
-
-      <a href="#services">Services</a>
-
-      <a href="#methode">Méthode</a>
-
-      <a href="#demos">Démos</a>
-
-      <a href="#contact">Contact</a>
-
-      <a
-        class="whatsapp-btn"
-        href="https://wa.me/21651649956"
-        target="_blank"
-      >
-        WhatsApp
+      <a href="#" class="logo">
+        <span>FP</span>
+        Formationprot
       </a>
 
+      <button class="menu-toggle" id="menu-toggle">
+        ☰
+      </button>
+
+      <div class="menu" id="mobile-menu">
+
+        <a href="#services">Services</a>
+
+        <a href="#methode">Méthode</a>
+
+        <a href="#demos">Démos</a>
+
+        <a href="#contact">Contact</a>
+
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/21651649956"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content reveal">
+
+      <h1>
+        Transformez votre idée en
+        <span>présence digitale premium.</span>
+      </h1>
+
+      <p>
+        Sites web modernes, applications mobiles,
+        e-commerce, marketing digital et solutions
+        professionnelles sur mesure.
+      </p>
+
     </div>
 
-  </nav>
+  </section>
 
-</header>
 
-  <main>
-    <section class="hero" id="accueil">
-      <div class="hero-container">
-        <div class="reveal">
-          <div class="badge">🚀 Agence digitale moderne en Tunisie</div>
-          <h1>
-            Transformez votre idée en
-            <span class="gradient">présence digitale premium</span>.
-          </h1>
-          <p>
-            Sites web modernes, applications mobiles, e-commerce, marketing digital,
-            formations professionnelles et solutions sur mesure pour développer votre activité.
-          </p>
 
-          <div class="hero-buttons">
-            <a href="https://wa.me/21651649956" target="_blank" rel="noopener" class="btn btn-primary">📱 Démarrer sur WhatsApp</a>
-            <a href="#demos" class="btn btn-secondary">Voir les réalisations</a>
-          </div>
+  <!-- DEMOS -->
 
-          <div class="stats">
-            <div class="stat">
-              <strong>+6</strong>
-              <span>Services digitaux</span>
-            </div>
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Responsive mobile</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Contact WhatsApp</span>
-            </div>
-          </div>
-        </div>
+  <section class="section" id="demos">
 
-        <div class="mockup reveal">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Développement web professionnel" />
-          <div class="floating-card">
-            <strong>Projet digital prêt ?</strong>
-            <span>Site web, app, e-commerce ou formation.</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container">
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-title reveal">
-          <span>Nos services</span>
-          <h2>Solutions digitales complètes</h2>
-          <p>Un accompagnement simple, moderne et efficace pour construire une image professionnelle en ligne.</p>
-        </div>
+      <h2 class="section-title reveal">
+        Nos démos professionnelles
+      </h2>
 
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-icon">💻</div>
-            <h3>Sites web</h3>
-            <p>Sites vitrines, portfolios, landing pages et plateformes modernes rapides, claires et professionnelles.</p>
-          </article>
+      <div class="demos-grid">
 
-          <article class="card reveal">
-            <div class="card-icon">📱</div>
-            <h3>Applications mobiles</h3>
-            <p>Applications Android et iOS avec interface propre, expérience fluide et fonctionnalités avancées.</p>
-          </article>
+        <!-- SALLE SPORT -->
 
-          <article class="card reveal">
-            <div class="card-icon">🛒</div>
-            <h3>E-commerce</h3>
-            <p>Boutiques en ligne, catalogue produits, panier, commandes, paiement et gestion simple.</p>
-          </article>
+        <article class="demo-card reveal">
 
-          <article class="card reveal">
-            <div class="card-icon">📈</div>
-            <h3>Marketing digital</h3>
-            <p>Facebook Ads, Google Ads, branding, SEO, contenu et stratégie pour attirer plus de clients.</p>
-          </article>
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"
+            alt="Salle sport"
+          />
 
-          <article class="card reveal">
-            <div class="card-icon">🖥️</div>
-            <h3>Applications desktop</h3>
-            <p>Logiciels Windows pour gestion de stock, facturation, administration et organisation interne.</p>
-          </article>
+          <div class="demo-content">
 
-          <article class="card reveal">
-            <div class="card-icon">🎓</div>
-            <h3>Formations</h3>
-            <p>Formations en développement web, programmation, bureautique et informatique pratique.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+            <h3>Salle de sport</h3>
 
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-title reveal">
-          <span>Notre méthode</span>
-          <h2>Du besoin au résultat final</h2>
-        </div>
-
-        <div class="process">
-          <div class="step reveal">
-            <span>1</span>
-            <h3>Analyse</h3>
-            <p>On comprend ton besoin, ton activité et l'objectif du projet.</p>
-          </div>
-          <div class="step reveal">
-            <span>2</span>
-            <h3>Design</h3>
-            <p>On prépare une interface moderne, claire et adaptée au mobile.</p>
-          </div>
-          <div class="step reveal">
-            <span>3</span>
-            <h3>Développement</h3>
-            <p>On construit une solution rapide, propre et professionnelle.</p>
-          </div>
-          <div class="step reveal">
-            <span>4</span>
-            <h3>Lancement</h3>
-            <p>On met le projet en ligne et on optimise l'expérience utilisateur.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="demos">
-      <div class="container">
-        <div class="section-title reveal">
-          <span>Démos & projets</span>
-          <h2>Exemples de réalisations</h2>
-          <p>Des modèles professionnels que tu peux adapter selon ton activité.</p>
-        </div>
-
-        <div class="demo-grid">
-          <article class="demo-card reveal">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" alt="Site vitrine salle de sport" />
-            <div class="demo-content">
-              <h3>Salle de sport</h3>
-              <p>Site vitrine moderne pour coach, fitness, planning, abonnements et contact WhatsApp.</p>
-              <a href="#contact">Demander cette démo →</a>
-            </div>
-          </article>
-
-          <article class="demo-card reveal">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Site restaurant" />
-            <div class="demo-content">
-              <h3>Restaurant & café</h3>
-              <p>Menu, galerie, réservation, localisation et bouton WhatsApp pour recevoir les commandes.</p>
-              <a href="#contact">Demander cette démo →</a>
-            </div>
-          </article>
-
-         <a href="./agence-immobiliere/index.html" target="_blank" class="demo-card reveal demo-full-card">
-  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop" alt="Site immobilier">
-
-  <div class="demo-content">
-    <h3>Agence immobilière</h3>
-    <p>Présentation des biens, photos, prix, contact rapide et demande de visite en ligne.</p>
-    <span class="demo-link">Voir le site complet →</span>
-  </div>
-</a>
-
-          <article class="demo-card reveal">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Site école formation" />
-            <div class="demo-content">
-              <h3>École & formation</h3>
-              <p>Site pour centre de formation avec programmes, inscriptions, horaires et contact.</p>
-              <a href="#contact">Demander cette démo →</a>
-            </div>
-          </article>
-
-          <article class="demo-card reveal">
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="Boutique e-commerce" />
-            <div class="demo-content">
-              <h3>Boutique e-commerce</h3>
-              <p>Produits, catégories, panier, commande WhatsApp et design premium pour vendre en ligne.</p>
-              <a href="#contact">Demander cette démo →</a>
-            </div>
-          </article>
-
-          <article class="demo-card reveal">
-            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop" alt="Site cabinet médical" />
-            <div class="demo-content">
-              <h3>Cabinet médical</h3>
-              <p>Présentation du cabinet, spécialités, horaires, localisation et prise de rendez-vous.</p>
-              <a href="#contact">Demander cette démo →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact reveal">
-          <div>
-            <div class="badge">📞 Contact rapide</div>
-            <h2>Prêt à lancer votre projet ?</h2>
             <p>
-              Envoyez votre besoin : site web, application, e-commerce, marketing digital,
-              formation ou maintenance informatique. Nous vous répondrons directement sur WhatsApp.
+              Site vitrine moderne pour coach,
+              fitness, planning et contact WhatsApp.
             </p>
+
+            <a
+              class="demo-link"
+              href="https://wa.me/21651649956"
+              target="_blank"
+            >
+              Demander cette démo →
+            </a>
+
           </div>
 
-          <form class="form-group" onsubmit="sendWhatsapp(event)">
-            <input type="text" id="nom" placeholder="Votre nom" required />
-            <select id="service" required>
-              <option value="">Choisir un service</option>
-              <option value="Site web">💻 Site web</option>
-              <option value="Application mobile">📱 Application mobile</option>
-              <option value="E-commerce">🛒 E-commerce</option>
-              <option value="Marketing digital">📈 Marketing digital</option>
-              <option value="Application desktop">🖥️ Application desktop</option>
-              <option value="Formation">🎓 Formation</option>
-              <option value="Maintenance informatique">🛠️ Maintenance informatique</option>
-            </select>
-            <textarea id="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer sur WhatsApp</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+        </article>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>Formationprot</h3>
-        <p>Agence digitale spécialisée en développement web, applications, e-commerce, marketing digital et formations.</p>
+
+
+        <!-- RESTAURANT -->
+
+        <article class="demo-card reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+            alt="Restaurant"
+          />
+
+          <div class="demo-content">
+
+            <h3>Restaurant & café</h3>
+
+            <p>
+              Menu, galerie, réservation,
+              localisation et commandes WhatsApp.
+            </p>
+
+            <a
+              class="demo-link"
+              href="https://wa.me/21651649956"
+              target="_blank"
+            >
+              Demander cette démo →
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- IMMOBILIER -->
+
+        <a
+          href="./agence-immobiliere/"
+          target="_blank"
+          class="demo-card reveal"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
+            alt="Site immobilier"
+          />
+
+          <div class="demo-content">
+
+            <h3>Agence immobilière</h3>
+
+            <p>
+              Présentation des biens, photos,
+              prix, contact rapide et demande
+              de visite en ligne.
+            </p>
+
+            <span class="demo-link">
+              Voir le site complet →
+            </span>
+
+          </div>
+
+        </a>
+
       </div>
 
-      <div class="footer-col">
-        <h3>Services</h3>
-        <a href="#services">Sites web</a>
-        <a href="#services">Applications</a>
-        <a href="#services">E-commerce</a>
-        <a href="#services">Formation</a>
-      </div>
-
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <a href="https://wa.me/21651649956" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="#contact">Demander un devis</a>
-        <a href="#">Tunisie</a>
-      </div>
-
-      <div class="footer-col">
-        <h3>Réseaux</h3>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-      </div>
     </div>
 
-    <div class="copy">© 2026 Formationprot — Tous droits réservés.</div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title reveal">
+        Contact
+      </h2>
+
+      <div class="hero-content reveal">
+
+        <p>
+          Besoin d’un site web professionnel,
+          application ou solution digitale ?
+          Contactez-nous directement sur WhatsApp.
+        </p>
+
+        <br><br>
+
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/21651649956"
+          target="_blank"
+        >
+          Contacter sur WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <p>
+      © 2026 Formationprot —
+      Solutions digitales professionnelles
+    </p>
+
   </footer>
 
-  <a class="float-whatsapp" href="https://wa.me/21651649956" target="_blank" rel="noopener" aria-label="Contact WhatsApp">💬</a>
 
-  <script>
-    const revealElements = document.querySelectorAll('.reveal');
 
-    const revealOnScroll = () => {
-      const windowHeight = window.innerHeight;
-      revealElements.forEach((el) => {
-        const elementTop = el.getBoundingClientRect().top;
-        if(elementTop < windowHeight - 80){
-          el.classList.add('active');
-        }
-      });
-    };
+  <script src="script.js"></script>
 
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-    function sendWhatsapp(event){
-      event.preventDefault();
-
-      const nom = document.getElementById('nom').value.trim();
-      const service = document.getElementById('service').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      const text = encodeURIComponent(
-        `Bonjour Formationprot 👋\n\nNom : ${nom}\nService : ${service}\nMessage : ${message}`
-      );
-
-      window.open(`https://wa.me/21651649956?text=${text}`, '_blank');
-    }
-  </script>
 </body>
+
 </html>
