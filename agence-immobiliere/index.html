@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImmoNova — Agence Immobilière</title>
 
-<link rel="stylesheet" href="./style.css">
+<title>Agence Immobilière</title>
+
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -13,87 +15,56 @@
 <body>
 
 <header class="header">
-  <div class="container nav">
-    <div class="logo">ImmoNova</div>
 
-    <nav class="menu">
-      <a href="#hero">Accueil</a>
-      <a href="#biens">Biens</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="logo">
+ImmoNova
+</div>
+
+<nav class="menu">
+<a href="#">Accueil</a>
+<a href="#">Biens</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
-<section class="hero" id="hero">
-  <div class="overlay"></div>
+<section class="hero">
 
-  <div class="hero-content">
-    <h1>Trouvez votre maison idéale</h1>
+<div class="overlay"></div>
 
-    <p>
-      Villas, appartements et maisons premium en Tunisie.
-    </p>
+<div class="hero-content">
 
-    <a href="#biens" class="hero-btn">
-      Voir les biens
-    </a>
-  </div>
+<h1>
+Trouvez votre maison idéale
+</h1>
+
+<p>
+Villas et appartements premium en Tunisie
+</p>
+
+<a href="#biens" class="btn">
+Voir les biens
+</a>
+
+</div>
+
 </section>
 
 <section class="properties" id="biens">
 
-  <div class="section-title">
-    <h2>Nos meilleures opportunités</h2>
-  </div>
+<h2 class="section-title">
+Nos meilleures opportunités
+</h2>
 
-  <div class="property-grid" id="property-grid"></div>
-
-</section>
-
-<section class="contact" id="contact">
-
-  <div class="contact-box">
-
-    <h2>Demander une visite</h2>
-
-    <form id="contactForm">
-
-      <input
-        type="text"
-        id="name"
-        placeholder="Votre nom"
-        required
-      >
-
-      <input
-        type="tel"
-        id="phone"
-        placeholder="Téléphone"
-        required
-      >
-
-      <textarea
-        id="message"
-        placeholder="Votre message"
-      ></textarea>
-
-      <button type="submit">
-        Envoyer sur WhatsApp
-      </button>
-
-    </form>
-
-  </div>
+<div class="grid" id="grid"></div>
 
 </section>
 
 <footer class="footer">
-  <p>
-    © 2026 ImmoNova — Agence immobilière premium
-  </p>
+© 2026 ImmoNova
 </footer>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
