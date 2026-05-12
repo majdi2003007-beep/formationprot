@@ -34,3 +34,9 @@ function sendWhatsapp(e){
 }
 function toggleMenu(){document.getElementById('menu').classList.toggle('active')}
 renderProperties(properties);
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
