@@ -17,6 +17,10 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+html{
+scroll-padding-top:110px;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#020617;
@@ -53,7 +57,7 @@ position:fixed;
 top:0;
 width:100%;
 backdrop-filter:blur(12px);
-background:rgba(2,6,23,0.75);
+background:rgba(2,6,23,0.85);
 border-bottom:1px solid rgba(255,255,255,0.08);
 z-index:1000;
 }
@@ -89,16 +93,16 @@ box-shadow:0 0 30px rgba(37,99,235,0.5);
 animation:float 3s infinite ease-in-out;
 }
 
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
-}
-
 .logo small{
 display:block;
 font-size:12px;
 font-weight:400;
 color:#94a3b8;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
 }
 
 .menu{
@@ -120,20 +124,26 @@ color:#06b6d4;
 
 .dropdown{
 position:relative;
+padding:12px 0;
+}
+
+.dropdown > a{
+display:inline-block;
 }
 
 .dropdown-menu{
 position:absolute;
-top:32px;
+top:46px;
 left:0;
-background:rgba(2,6,23,0.97);
+background:rgba(2,6,23,0.98);
 border:1px solid rgba(255,255,255,0.1);
 border-radius:18px;
 padding:14px;
-min-width:255px;
+min-width:265px;
 display:none;
 box-shadow:0 15px 35px rgba(0,0,0,0.35);
 backdrop-filter:blur(20px);
+z-index:2000;
 }
 
 .dropdown-menu a{
@@ -462,7 +472,6 @@ animation:pulse 2s infinite;
 }
 
 @media(max-width:900px){
-
 .nav{
 flex-direction:column;
 gap:18px;
@@ -475,13 +484,14 @@ justify-content:center;
 gap:14px;
 }
 
-.dropdown-menu{
-position:static;
-margin-top:10px;
+.dropdown{
+padding:6px 0;
 }
 
-.dropdown:hover .dropdown-menu{
-display:block;
+.dropdown-menu{
+position:absolute;
+top:35px;
+left:0;
 }
 
 .hero-container,
@@ -490,7 +500,7 @@ grid-template-columns:1fr;
 }
 
 .hero{
-padding-top:210px;
+padding-top:230px;
 }
 
 .hero h1{
@@ -500,7 +510,6 @@ font-size:46px;
 .section-title h2{
 font-size:36px;
 }
-
 }
 </style>
 </head>
@@ -550,6 +559,7 @@ Formationprot
 <a href="#contact">Demander un devis</a>
 <a href="#contact">Montage vidéo</a>
 <a href="#contact">Publicité Facebook</a>
+<a href="#contact">Projet immobilier</a>
 </div>
 </div>
 
@@ -562,7 +572,7 @@ WhatsApp
 </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="accueil">
 <div class="hero-container">
 
 <div>
@@ -655,6 +665,12 @@ Voir nos démos
 <p>Publicités Facebook, Instagram et TikTok, affiches promotionnelles, branding, contenu marketing et campagnes digitales.</p>
 </div>
 
+<div class="card">
+<div class="card-icon">🏠</div>
+<h3>Sites immobiliers</h3>
+<p>Création de sites immobiliers avec annonces, photos, détails des biens, contact WhatsApp et présentation professionnelle.</p>
+</div>
+
 </div>
 </div>
 </section>
@@ -697,6 +713,15 @@ Voir nos démos
 </div>
 
 <div class="demo-card">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
+<div class="demo-content">
+<h3>Site immobilier</h3>
+<p>Démo immobilière moderne avec annonces, biens, photos et contact rapide.</p>
+<a href="#contact">Voir démo →</a>
+</div>
+</div>
+
+<div class="demo-card">
 <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
 <div class="demo-content">
 <h3>Montage vidéo & publicité</h3>
@@ -723,13 +748,13 @@ Prêt à lancer votre projet ?
 
 <p style="color:#cbd5e1;font-size:18px;line-height:1.8;">
 Envoyez-nous votre besoin : site web, application, marketing digital,
-formation, montage vidéo pro, publicité diverse ou maintenance informatique.
+formation, montage vidéo pro, publicité diverse, immobilier ou maintenance informatique.
 </p>
 </div>
 
 <div>
 <input type="text" id="nom" placeholder="Votre nom">
-<input type="text" id="service" placeholder="Service demandé : site, montage vidéo, publicité...">
+<input type="text" id="service" placeholder="Service demandé : site, montage vidéo, publicité, immobilier...">
 <textarea id="message" placeholder="Votre message"></textarea>
 
 <button onclick="sendWhatsapp()">
@@ -748,7 +773,7 @@ Envoyer sur WhatsApp
 <h3>Formationprot</h3>
 <p style="color:#94a3b8;line-height:1.8;">
 Agence digitale spécialisée en développement web,
-applications, montage vidéo et marketing digital.
+applications, immobilier, montage vidéo et marketing digital.
 </p>
 </div>
 
@@ -756,10 +781,21 @@ applications, montage vidéo et marketing digital.
 <h3>Services</h3>
 <a href="#services">Sites web</a>
 <a href="#services">Applications</a>
+<a href="#services">E-commerce</a>
 <a href="#services">Marketing</a>
 <a href="#services">Formation</a>
 <a href="#services">Montage vidéo pro</a>
 <a href="#services">Publicité diverse</a>
+<a href="#services">Sites immobiliers</a>
+</div>
+
+<div class="footer-col">
+<h3>Démos</h3>
+<a href="#demos">Site vitrine</a>
+<a href="#demos">E-commerce</a>
+<a href="#demos">Application mobile</a>
+<a href="#demos">Site immobilier</a>
+<a href="#demos">Montage vidéo</a>
 </div>
 
 <div class="footer-col">
@@ -768,13 +804,6 @@ applications, montage vidéo et marketing digital.
 <a href="#contact">Demander un devis</a>
 <a href="#contact">Montage vidéo</a>
 <a href="#contact">Publicité</a>
-</div>
-
-<div class="footer-col">
-<h3>Réseaux</h3>
-<a href="#">Facebook</a>
-<a href="#">Instagram</a>
-<a href="#">TikTok</a>
 </div>
 
 </div>
