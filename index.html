@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Formationprot — Création de sites web, applications, e-commerce, marketing digital et formations professionnelles en Tunisie." />
@@ -1154,5 +1155,482 @@
       window.open(`https://wa.me/21651649956?text=${text}`, '_blank');
     }
   </script>
+=======
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Formationprot — Digital • Formation • Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
+  
+html{scroll-padding-top:110px}
+body{font-family:'Poppins',sans-serif;background:#020617;color:white;overflow-x:hidden}
+.video-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden}
+.video-bg video{width:100%;height:100%;object-fit:cover;filter:brightness(.25)}
+.overlay{position:fixed;inset:0;background:linear-gradient(to right,#020617ee,#020617aa,#020617ee);z-index:-1}
+
+/* HEADER */
+header{position:fixed;top:0;width:100%;backdrop-filter:blur(14px);background:rgba(2,6,23,.82);border-bottom:1px solid rgba(255,255,255,.08);z-index:1000}
+.nav{max-width:1200px;margin:auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:14px;font-weight:800;font-size:28px;color:white;text-decoration:none}
+.logo-box{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#2563eb,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;box-shadow:0 0 30px rgba(37,99,235,.5);animation:float 3s infinite ease-in-out}
+.logo small{display:block;font-size:12px;font-weight:400;color:#94a3b8}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+.menu{display:flex;gap:26px;align-items:center}
+.menu a{color:white;text-decoration:none;font-weight:500;transition:.3s}
+.menu a:hover{color:#06b6d4}
+
+.dropdown{position:relative;padding:14px 0}
+.dropdown>a{display:flex;align-items:center;gap:5px}
+.dropdown-menu{
+position:absolute;top:52px;left:0;min-width:285px;
+background:rgba(2,6,23,.98);border:1px solid rgba(255,255,255,.1);
+border-radius:20px;padding:14px;display:none;box-shadow:0 20px 45px rgba(0,0,0,.45);
+backdrop-filter:blur(20px);z-index:3000
+}
+.dropdown-menu:before{content:"";position:absolute;top:-18px;left:0;width:100%;height:20px}
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:12px 14px;border-radius:14px;white-space:nowrap;color:white}
+.dropdown-menu a:hover{background:rgba(255,255,255,.08);color:#06b6d4}
+
+.whatsapp-btn{padding:14px 24px;border-radius:50px;background:#22c55e;color:white!important;font-weight:700;box-shadow:0 0 25px rgba(34,197,94,.4);animation:pulse 2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 20px 80px}
+.hero-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.badge{display:inline-block;padding:10px 18px;border-radius:40px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);margin-bottom:25px;font-size:14px}
+.hero h1{font-size:72px;line-height:1.05;font-weight:800;margin-bottom:25px}
+.gradient{background:linear-gradient(90deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;line-height:1.8;color:#cbd5e1;margin-bottom:35px}
+.hero-buttons{display:flex;gap:20px;flex-wrap:wrap}
+.btn{padding:16px 28px;border-radius:18px;text-decoration:none;font-weight:700;transition:.3s;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;box-shadow:0 0 30px rgba(37,99,235,.35)}
+.btn-primary:hover{transform:translateY(-4px)}
+.btn-secondary{border:1px solid rgba(255,255,255,.15);color:white;background:rgba(255,255,255,.05)}
+.mockup{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:30px;padding:20px;backdrop-filter:blur(20px);animation:float 5s infinite ease-in-out}
+.mockup img{width:100%;border-radius:20px}
+
+/* SECTIONS */
+.section{padding:110px 20px}
+.container{max-width:1200px;margin:auto}
+.section-title{text-align:center;margin-bottom:70px}
+.section-title span{color:#06b6d4;font-weight:700}
+.section-title h2{font-size:52px;margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:35px;transition:.4s;backdrop-filter:blur(20px);text-decoration:none;color:white;display:block}
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 0 40px rgba(37,99,235,.25)}
+.card-icon{font-size:42px;margin-bottom:20px}
+.card h3{font-size:28px;margin-bottom:16px}
+.card p{color:#cbd5e1;line-height:1.8}
+
+/* DEMOS */
+.demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.demo-card{background:rgba(255,255,255,.05);border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.08);transition:.4s}
+.demo-card:hover{transform:translateY(-10px)}
+.demo-card img{width:100%;height:230px;object-fit:cover}
+.demo-content{padding:25px}
+.demo-content h3{font-size:28px;margin-bottom:12px}
+.demo-content p{color:#cbd5e1;margin-bottom:18px;line-height:1.7}
+.demo-content a{color:#06b6d4;text-decoration:none;font-weight:700}
+
+/* SERVICE LANDING BLOCKS */
+.service-page{margin-top:35px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:35px;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.service-page h3{font-size:42px;margin-bottom:18px}
+.service-page p{color:#cbd5e1;line-height:1.8;margin-bottom:20px}
+.service-page ul{list-style:none;color:#cbd5e1;line-height:2}
+.service-page img{width:100%;border-radius:28px;height:330px;object-fit:cover}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:rgba(255,255,255,.05);padding:50px;border-radius:35px;border:1px solid rgba(255,255,255,.08)}
+.contact input,.contact textarea{width:100%;padding:18px;margin-bottom:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:18px;color:white;font-family:Poppins}
+.contact textarea{height:150px;resize:none}
+.contact button{width:100%;padding:18px;border:none;border-radius:18px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;font-size:18px;font-weight:700;cursor:pointer;transition:.3s}
+.contact button:hover{transform:translateY(-3px)}
+
+/* FOOTER */
+footer{padding:80px 20px 40px;background:#01040d;border-top:1px solid rgba(255,255,255,.08)}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px}
+.footer-col h3{margin-bottom:20px;font-size:24px}
+.footer-col a{display:block;color:#94a3b8;text-decoration:none;margin-bottom:12px;transition:.3s}
+.footer-col a:hover{color:#06b6d4}
+.copy{text-align:center;margin-top:50px;color:#64748b}
+.copy a{color:#06b6d4;text-decoration:none;font-weight:700}
+
+.float-whatsapp{position:fixed;bottom:25px;right:25px;width:70px;height:70px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;color:white;box-shadow:0 0 30px rgba(34,197,94,.4);z-index:999;animation:pulse 2s infinite}
+
+@media(max-width:900px){
+.nav{flex-direction:column;gap:15px}
+.menu{flex-wrap:wrap;justify-content:center;gap:16px}
+.hero-container,.contact,.service-page{grid-template-columns:1fr}
+.hero{padding-top:230px}
+.hero h1{font-size:46px}
+.section-title h2{font-size:36px}
+.dropdown-menu{left:50%;transform:translateX(-50%)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="video-bg">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-programming-on-a-laptop-1564843335748?download=1080p" type="video/mp4">
+</video>
+</div>
+<div class="overlay"></div>
+
+<header>
+<div class="nav">
+<a class="logo" href="#accueil">
+<div class="logo-box">FP</div>
+<div>Formationprot<small>Digital • Formation • Solutions</small></div>
+</a>
+
+<div class="menu">
+<div class="dropdown">
+<a href="#services">Services ▾</a>
+<div class="dropdown-menu">
+<a href="#site-web">💻 Sites web</a>
+<a href="#application-mobile">📱 Applications mobiles</a>
+<a href="#ecommerce">🛒 E-commerce</a>
+<a href="#marketing">📈 Marketing digital</a>
+<a href="#formation">🎓 Formations</a>
+<a href="#montage-video">🎬 Montage vidéo pro</a>
+<a href="#publicite">📢 Publicité diverse</a>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">🏠 Site immobilier</a>
+</div>
+</div>
+
+<div class="dropdown">
+<a href="#demos">Démos ▾</a>
+<div class="dropdown-menu">
+<a href="#demos">Toutes les démos</a>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">🏠 Démo immobilière</a>
+<a href="#demo-video">🎬 Démo montage vidéo</a>
+<a href="#demo-publicite">📢 Démo publicité</a>
+</div>
+</div>
+
+<div class="dropdown">
+
+<a href="#contact">
+Contact ▾
+</a>
+
+<div class="dropdown-menu">
+
+<a href="https://wa.me/21651649956" target="_blank">
+📱 WhatsApp
+</a>
+
+<a href="#contact">
+📝 Demander un devis
+</a>
+
+<a href="#site-web">
+💻 Site web
+</a>
+
+<a href="#application-mobile">
+📱 Application mobile
+</a>
+
+<a href="#ecommerce">
+🛒 E-commerce
+</a>
+
+<a href="#marketing">
+📈 Marketing digital
+</a>
+
+<a href="#formation">
+🎓 Formation
+</a>
+
+<a href="#montage-video">
+🎬 Montage vidéo pro
+</a>
+
+<a href="#publicite">
+📢 Publicité diverse
+</a>
+
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">
+🏠 Site immobilier
+</a>
+
+</div>
+
+</div>
+
+<a class="whatsapp-btn" href="https://wa.me/21651649956" target="_blank">WhatsApp</a>
+</div>
+</div>
+</header>
+
+<section class="hero" id="accueil">
+<div class="hero-container">
+<div>
+<div class="badge">🚀 Agence digitale moderne</div>
+<h1>Créez une présence <span class="gradient">digitale premium</span> pour votre entreprise.</h1>
+<p>Sites web modernes, applications mobiles, marketing digital, formation professionnelle, montage vidéo pro et publicités digitales complètes.</p>
+<div class="hero-buttons">
+<a href="https://wa.me/21651649956" target="_blank" class="btn btn-primary">📱 Contacter WhatsApp</a>
+<a href="#demos" class="btn btn-secondary">Voir nos démos</a>
+</div>
+</div>
+<div class="mockup">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="container">
+<div class="section-title">
+<span>Nos services</span>
+<h2>Solutions digitales complètes</h2>
+</div>
+
+<div class="cards">
+<a href="#site-web" class="card"><div class="card-icon">💻</div><h3>Sites web</h3><p>Création de sites vitrines, portfolios, landing pages et plateformes professionnelles modernes.</p></a>
+<a href="#application-mobile" class="card"><div class="card-icon">📱</div><h3>Applications mobiles</h3><p>Applications Android et iOS modernes avec design premium et fonctionnalités avancées.</p></a>
+<a href="#ecommerce" class="card"><div class="card-icon">🛒</div><h3>E-commerce</h3><p>Boutiques en ligne, paiement sécurisé, catalogue produits et gestion commandes.</p></a>
+<a href="#marketing" class="card"><div class="card-icon">📈</div><h3>Marketing digital</h3><p>Facebook Ads, Google Ads, branding, SEO et stratégies digitales professionnelles.</p></a>
+<a href="#formation" class="card"><div class="card-icon">🎓</div><h3>Formations</h3><p>Formation développement web, programmation, bureautique et informatique.</p></a>
+<a href="#montage-video" class="card"><div class="card-icon">🎬</div><h3>Montage vidéo pro</h3><p>Reels TikTok, vidéos publicitaires, montage CapCut, sous-titres et contenus premium.</p></a>
+<a href="#publicite" class="card"><div class="card-icon">📢</div><h3>Publicité diverse</h3><p>Publicités Facebook, Instagram, TikTok, affiches promotionnelles et campagnes digitales.</p></a>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank" class="card"><div class="card-icon">🏠</div><h3>Site immobilier</h3><p>Démo immobilière moderne avec annonces, photos, biens et contact WhatsApp.</p></a>
+</div>
+</div>
+</section>
+
+<section class="section" id="site-web">
+<div class="container service-page">
+<div>
+<h3>💻 Sites web professionnels</h3>
+<p>Nous créons des sites modernes pour entreprises, portfolios, restaurants, agences, coachs, formations et services.</p>
+<ul>
+<li>✅ Design premium responsive</li>
+<li>✅ Bouton WhatsApp et formulaire</li>
+<li>✅ Pages services et démos</li>
+<li>✅ Optimisé mobile</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander un site</a>
+</div>
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="application-mobile">
+<div class="container service-page">
+<div>
+<h3>📱 Applications mobiles</h3>
+<p>Présentation professionnelle d’applications Android/iOS avec design moderne, interface claire et expérience utilisateur simple.</p>
+<ul>
+<li>✅ Design UI mobile</li>
+<li>✅ Application business</li>
+<li>✅ Pages de présentation</li>
+<li>✅ Contact rapide</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander une application</a>
+</div>
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="ecommerce">
+<div class="container service-page">
+<div>
+<h3>🛒 E-commerce</h3>
+<p>Boutiques modernes pour présenter produits, catégories, commandes, prix et contact rapide.</p>
+<ul>
+<li>✅ Catalogue produits</li>
+<li>✅ Design premium</li>
+<li>✅ Contact WhatsApp</li>
+<li>✅ Adapté ordinateur et mobile</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Créer boutique</a>
+</div>
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="marketing">
+<div class="container service-page">
+<div>
+<h3>📈 Marketing digital</h3>
+<p>Contenus, stratégie, posts, campagnes et identité visuelle pour développer votre présence en ligne.</p>
+<ul>
+<li>✅ Branding</li>
+<li>✅ Posts réseaux sociaux</li>
+<li>✅ Publicités Facebook/Instagram</li>
+<li>✅ Stratégie de contenu</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Lancer marketing</a>
+</div>
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="formation">
+<div class="container service-page">
+<div>
+<h3>🎓 Formations digitales</h3>
+<p>Formation informatique, web, outils digitaux, IA, bureautique et méthodes pratiques pour débutants.</p>
+<ul>
+<li>✅ Web et informatique</li>
+<li>✅ Outils IA</li>
+<li>✅ Canva / CapCut</li>
+<li>✅ Accompagnement pratique</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander formation</a>
+</div>
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="montage-video">
+<div class="container service-page">
+<div>
+<h3>🎬 Montage vidéo pro</h3>
+<p>Création de reels TikTok, vidéos Facebook, publicités courtes, montage CapCut, textes animés, transitions et sous-titres.</p>
+<ul>
+<li>✅ Reel 15-30 secondes</li>
+<li>✅ Sous-titres dynamiques</li>
+<li>✅ Effets modernes</li>
+<li>✅ Format TikTok / Facebook / Instagram</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Commander une vidéo</a>
+</div>
+<img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="publicite">
+<div class="container service-page">
+<div>
+<h3>📢 Publicité diverse</h3>
+<p>Création d’affiches, posts Facebook, campagnes locales, visuels promotionnels et contenus pour attirer des clients.</p>
+<ul>
+<li>✅ Affiches promotionnelles</li>
+<li>✅ Publicités commerce</li>
+<li>✅ Posts Facebook / Instagram</li>
+<li>✅ Pack contenu mensuel</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Créer publicité</a>
+</div>
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop" alt="">
+</div>
+</section>
+
+<section class="section" id="demos">
+<div class="container">
+<div class="section-title">
+<span>Démos & projets</span>
+<h2>Exemples de réalisations</h2>
+</div>
+
+<div class="demo-grid">
+<div class="demo-card">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
+<div class="demo-content">
+<h3>Site immobilier</h3>
+<p>Démo immobilière moderne avec annonces, biens, photos et contact rapide.</p>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">Voir démo →</a>
+</div>
+</div>
+
+<div class="demo-card" id="demo-video">
+<img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
+<div class="demo-content">
+<h3>Montage vidéo pro</h3>
+<p>Reels publicitaires, vidéos courtes, sous-titres, transitions et montage moderne pour réseaux sociaux.</p>
+<a href="#montage-video">Voir détails →</a>
+</div>
+</div>
+
+<div class="demo-card" id="demo-publicite">
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
+<div class="demo-content">
+<h3>Publicité diverse</h3>
+<p>Affiches, campagnes Facebook, Instagram, TikTok et contenus marketing pour entreprises.</p>
+<a href="#publicite">Voir détails →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="contact">
+<div>
+<div class="badge">📞 Contact</div>
+<h2 style="font-size:48px;margin:20px 0;">Prêt à lancer votre projet ?</h2>
+<p style="color:#cbd5e1;font-size:18px;line-height:1.8;">Envoyez-nous votre besoin : site web, application, marketing digital, formation, montage vidéo, publicité ou site immobilier.</p>
+</div>
+<div>
+<input type="text" id="nom" placeholder="Votre nom">
+<input type="text" id="service" placeholder="Service demandé : site, montage vidéo, publicité...">
+<textarea id="message" placeholder="Votre message"></textarea>
+<button onclick="sendWhatsapp()">Envoyer sur WhatsApp</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-col">
+<h3>Formationprot</h3>
+<p style="color:#94a3b8;line-height:1.8;">Agence digitale spécialisée en développement web, applications, montage vidéo, publicité et marketing digital.</p>
+</div>
+<div class="footer-col">
+<h3>Services</h3>
+<a href="#site-web">Sites web</a>
+<a href="#application-mobile">Applications</a>
+<a href="#ecommerce">E-commerce</a>
+<a href="#marketing">Marketing</a>
+<a href="#montage-video">Montage vidéo pro</a>
+<a href="#publicite">Publicité diverse</a>
+</div>
+<div class="footer-col">
+<h3>Démos</h3>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">Site immobilier</a>
+<a href="#demo-video">Montage vidéo</a>
+<a href="#demo-publicite">Publicité</a>
+</div>
+<div class="footer-col">
+<h3>Contact</h3>
+<a href="https://wa.me/21651649956" target="_blank">WhatsApp</a>
+<a href="#contact">Demander un devis</a>
+<a href="https://majdi2003007-beep.github.io/formationprot/">Formationprot</a>
+</div>
+</div>
+<div class="copy">
+Created by <a href="https://majdi2003007-beep.github.io/formationprot/">Formationprot</a> — © 2026 Tous droits réservés.
+</div>
+</footer>
+
+<a class="float-whatsapp" href="https://wa.me/21651649956" target="_blank">💬</a>
+
+<script>
+function sendWhatsapp(){
+let nom=document.getElementById("nom").value;
+let service=document.getElementById("service").value;
+let message=document.getElementById("message").value;
+let text="Bonjour Formationprot 👋%0A%0A"+"Nom : "+nom+"%0A"+"Service : "+service+"%0A"+"Message : "+message;
+window.open("https://wa.me/21651649956?text="+text,"_blank");
+}
+</script>
+
+>>>>>>> 52c47e087c9ac474fa456fa477bb91bf56120188
 </body>
 </html>

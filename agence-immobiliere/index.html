@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>Nos meilleures opportunités</h2>
   </div>
 
@@ -473,3 +474,138 @@ footer a{
     height:350px;
   }
 }
+=======
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Démo site agence immobilière moderne : villas, appartements, terrains, visites et contact WhatsApp." />
+  <title>ImmoNova — Agence Immobilière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo"><span>IN</span> ImmoNova</a>
+      <div class="menu" id="menu">
+        <a href="#biens">Biens</a>
+        <a href="#services">Services</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <a class="nav-cta" href="https://wa.me/21651649956" target="_blank">WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Agence immobilière premium</span>
+        <h1>Trouvez le bien idéal avec une expérience moderne.</h1>
+        <p>Villas, appartements, terrains et locaux commerciaux avec photos, prix, détails et demande de visite directe sur WhatsApp.</p>
+        <div class="hero-actions">
+          <a href="#biens" class="btn primary">Voir les biens</a>
+          <a href="#contact" class="btn secondary">Demander une visite</a>
+        </div>
+        <div class="stats">
+          <div><strong>120+</strong><span>Biens disponibles</span></div>
+          <div><strong>48h</strong><span>Réponse rapide</span></div>
+          <div><strong>4.9/5</strong><span>Satisfaction clients</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop" alt="Villa moderne" />
+        <div class="price-card">
+          <span>Villa moderne</span>
+          <strong>850 000 TND</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-box">
+      <div>
+        <label>Type</label>
+        <select id="typeFilter"><option value="all">Tous</option><option value="villa">Villa</option><option value="appartement">Appartement</option><option value="terrain">Terrain</option></select>
+      </div>
+      <div>
+        <label>Ville</label>
+        <select id="cityFilter"><option value="all">Toutes</option><option value="Sfax">Sfax</option><option value="Tunis">Tunis</option><option value="Sousse">Sousse</option></select>
+      </div>
+      <div>
+        <label>Budget max</label>
+        <select id="priceFilter"><option value="9999999">Illimité</option><option value="250000">250 000 TND</option><option value="500000">500 000 TND</option><option value="900000">900 000 TND</option></select>
+      </div>
+      <button onclick="filterProperties()">Rechercher</button>
+    </section>
+
+    <section class="section" id="biens">
+      <div class="section-title">
+        <span>Biens sélectionnés</span>
+        <h2>Nos meilleures opportunités</h2>
+      </div>
+      <div class="property-grid" id="propertyGrid"></div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-title">
+        <span>Services</span>
+        <h2>Un accompagnement complet</h2>
+      </div>
+      <div class="service-grid">
+        <article><span>🏠</span><h3>Achat & vente</h3><p>Publication, estimation et accompagnement jusqu’à la signature.</p></article>
+        <article><span>🔑</span><h3>Location</h3><p>Appartements, maisons, bureaux et locaux professionnels.</p></article>
+        <article><span>📸</span><h3>Photos premium</h3><p>Mise en valeur des biens avec visuels modernes et présentation claire.</p></article>
+        <article><span>📍</span><h3>Visites rapides</h3><p>Organisation des visites et suivi direct avec le client.</p></article>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="avis">
+      <div class="section-title">
+        <span>Avis clients</span>
+        <h2>Ils nous font confiance</h2>
+      </div>
+      <div class="review-grid">
+        <article><p>“Service très professionnel, j’ai trouvé mon appartement rapidement.”</p><strong>— Amine, Tunis</strong></article>
+        <article><p>“La présentation des biens est claire et moderne. Très bonne expérience.”</p><strong>— Mariem, Sfax</strong></article>
+        <article><p>“Contact WhatsApp rapide, visite organisée le même jour.”</p><strong>— Yassine, Sousse</strong></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-info">
+        <span class="badge">Contact</span>
+        <h2>Demandez une visite ou une estimation.</h2>
+        <p>Remplissez le formulaire, le message sera préparé automatiquement sur WhatsApp.</p>
+      </div>
+      <form onsubmit="sendWhatsapp(event)" class="contact-form">
+        <input id="name" type="text" placeholder="Votre nom" required />
+        <input id="phone" type="tel" placeholder="Téléphone" required />
+        <select id="request" required>
+          <option value="">Votre besoin</option>
+          <option>Je cherche une villa</option>
+          <option>Je cherche un appartement</option>
+          <option>Je veux vendre un bien</option>
+          <option>Je veux louer un bien</option>
+          <option>Je veux une estimation</option>
+        </select>
+        <textarea id="msg" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer sur WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>ImmoNova</strong>
+    <p>Démo professionnelle créée par Formationprot.</p>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/21651649956" target="_blank">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 52c47e087c9ac474fa456fa477bb91bf56120188

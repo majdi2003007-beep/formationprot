@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const properties = [
   {type:'villa', city:'Sfax', price:850000, title:'Villa moderne avec piscine', rooms:'5 pièces', area:'420 m²', img:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop'},
   {type:'appartement', city:'Tunis', price:320000, title:'Appartement haut standing', rooms:'3 pièces', area:'118 m²', img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop'},
@@ -34,3 +35,32 @@ function sendWhatsapp(e){
 }
 function toggleMenu(){document.getElementById('menu').classList.toggle('active')}
 renderProperties(properties);
+=======
+// MENU MOBILE
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+}
+
+
+
+// ANIMATION SCROLL
+
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.add("active");
+    }
+  });
+});
+>>>>>>> 52c47e087c9ac474fa456fa477bb91bf56120188
