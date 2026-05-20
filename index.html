@@ -3,423 +3,662 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImmoNova — Agence Immobilière</title>
+<title>Formationprot — Démos Professionnelles</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:#f8fafc;color:#0f172a;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.bg{
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+linear-gradient(rgba(2,6,23,.88),rgba(2,6,23,.92)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.glow{
+position:fixed;
+width:500px;
+height:500px;
+background:#2563eb55;
+filter:blur(120px);
+border-radius:50%;
+top:-120px;
+right:-120px;
+z-index:-1;
+}
+
+/* HEADER */
 
 header{
-position:fixed;top:0;width:100%;z-index:999;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(16px);
-border-bottom:1px solid #e2e8f0;
+position:sticky;
+top:0;
+z-index:999;
+backdrop-filter:blur(15px);
+background:rgba(2,6,23,.75);
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
-max-width:1200px;margin:auto;padding:18px 20px;
-display:flex;justify-content:space-between;align-items:center;
+max-width:1200px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.logo{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:900}
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+font-size:28px;
+font-weight:800;
+}
+
 .logo-box{
-width:48px;height:48px;border-radius:16px;
+width:55px;
+height:55px;
+border-radius:16px;
 background:linear-gradient(135deg,#2563eb,#06b6d4);
-display:grid;place-items:center;color:white;font-weight:900;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:800;
+box-shadow:0 0 30px rgba(37,99,235,.45);
 }
 
-.menu{display:flex;align-items:center;gap:28px;font-weight:700}
-.menu a:hover{color:#2563eb}
-
-.dropdown{position:relative;padding:12px 0}
-.dropdown-menu{
-display:none;position:absolute;top:45px;left:0;
-min-width:260px;background:white;border:1px solid #e2e8f0;
-border-radius:18px;padding:12px;box-shadow:0 20px 50px rgba(15,23,42,.15);
-}
-.dropdown:hover .dropdown-menu{display:block}
-.dropdown-menu a{display:block;padding:12px;border-radius:12px;color:#0f172a}
-.dropdown-menu a:hover{background:#eff6ff;color:#2563eb}
-
-.nav-cta{
-background:#22c55e;color:white!important;padding:13px 22px;
-border-radius:40px;box-shadow:0 10px 30px rgba(34,197,94,.3)
+.menu{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.hero{
-min-height:100vh;padding:140px 20px 80px;
-background:linear-gradient(120deg,#eff6ff,#ffffff);
-display:grid;align-items:center;
-}
-
-.hero-wrap{
-max-width:1200px;margin:auto;display:grid;
-grid-template-columns:1fr 1fr;gap:60px;align-items:center;
-}
-
-.badge{
-display:inline-block;background:#dbeafe;color:#2563eb;
-padding:10px 18px;border-radius:40px;font-weight:800;margin-bottom:20px;
-}
-
-.hero h1{font-size:64px;line-height:1.05;margin-bottom:22px;font-weight:900}
-.hero p{font-size:18px;color:#475569;line-height:1.8;margin-bottom:30px}
-
-.btn{
-display:inline-block;padding:15px 26px;border-radius:16px;
-background:#2563eb;color:white;font-weight:800;margin-right:10px;
-}
-.btn-light{background:white;color:#2563eb;border:1px solid #cbd5e1}
-
-.hero-card{
-border-radius:30px;overflow:hidden;box-shadow:0 30px 80px rgba(15,23,42,.22);
-position:relative;
-}
-.hero-card img{width:100%;height:520px;object-fit:cover}
-.price-card{
-position:absolute;bottom:25px;left:25px;background:white;
-border-radius:20px;padding:18px;box-shadow:0 15px 40px rgba(0,0,0,.2)
-}
-.price-card span{color:#64748b}
-.price-card strong{display:block;font-size:28px;color:#2563eb}
-
-.section{padding:95px 20px}
-.container{max-width:1200px;margin:auto}
-.section-title{text-align:center;margin-bottom:55px}
-.section-title span{color:#2563eb;font-weight:900}
-.section-title h2{font-size:46px;margin-top:10px}
-
-.property-grid,.services-grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;
-}
-
-.property-card,.service-card,.contact-box{
-background:white;border-radius:26px;overflow:hidden;
-box-shadow:0 18px 50px rgba(15,23,42,.12);
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
 transition:.3s;
 }
 
-.property-card:hover,.service-card:hover{transform:translateY(-8px)}
-.property-card img{width:100%;height:230px;object-fit:cover}
-.property-content{padding:24px}
-.property-content h3{font-size:24px;margin-bottom:8px}
-.property-content p{color:#64748b;line-height:1.6;margin-bottom:14px}
-.property-price{color:#2563eb;font-size:22px;font-weight:900}
+.menu a:hover{
+color:#06b6d4;
+}
 
-.service-card{padding:30px}
-.service-icon{font-size:34px;margin-bottom:18px}
-.service-card h3{font-size:24px;margin-bottom:12px}
-.service-card p{color:#64748b;line-height:1.7}
+/* HERO */
 
-.contact-box{
-display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:45px;
+.hero{
+padding:120px 20px 90px;
+text-align:center;
 }
-.contact-box h2{font-size:42px;margin-bottom:20px}
-.contact-box p{color:#64748b;line-height:1.8}
-input,select,textarea{
-width:100%;padding:17px;margin-bottom:16px;border:1px solid #cbd5e1;
-border-radius:16px;font-family:Poppins;font-size:15px;
+
+.hero h1{
+font-size:70px;
+font-weight:800;
+line-height:1.05;
+margin-bottom:20px;
 }
-textarea{height:140px;resize:none}
-button{
-width:100%;padding:17px;border:0;border-radius:16px;
-background:#2563eb;color:white;font-weight:900;font-size:17px;cursor:pointer;
+
+.gradient{
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:20px;
+line-height:1.9;
+color:#cbd5e1;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 28px;
+border-radius:18px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+display:inline-block;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+box-shadow:0 0 35px rgba(37,99,235,.4);
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+/* SECTION */
+
+.section{
+padding:100px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:65px;
+}
+
+.section-title span{
+color:#06b6d4;
+font-weight:700;
+}
+
+.section-title h2{
+font-size:52px;
+margin-top:12px;
+}
+
+/* DEMOS */
+
+.demo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:32px;
+}
+
+.demo-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:28px;
+overflow:hidden;
+transition:.45s;
+backdrop-filter:blur(18px);
+position:relative;
+}
+
+.demo-card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 0 40px rgba(37,99,235,.25);
+}
+
+.demo-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.demo-content{
+padding:28px;
+}
+
+.demo-content h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.demo-content p{
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.demo-content a{
+display:inline-block;
+padding:13px 20px;
+border-radius:14px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.demo-content a:hover{
+transform:translateY(-3px);
+}
+
+/* REELS SECTION */
+
+.reels-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.reel-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:28px;
+padding:25px;
+text-align:center;
+backdrop-filter:blur(15px);
+transition:.4s;
+}
+
+.reel-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(37,99,235,.25);
+}
+
+.reel-card video{
+width:100%;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.reel-card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.reel-card p{
+color:#cbd5e1;
+line-height:1.8;
+}
+
+/* CTA */
+
+.cta{
+padding:110px 20px;
+text-align:center;
+}
+
+.cta-box{
+max-width:1000px;
+margin:auto;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+padding:60px 35px;
+border-radius:35px;
+backdrop-filter:blur(20px);
+}
+
+.cta h2{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:20px;
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* FOOTER */
 
 footer{
-background:#020617;color:white;padding:70px 20px 35px;
+padding:50px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+color:#94a3b8;
+margin-top:50px;
 }
-.footer-grid{
-max-width:1200px;margin:auto;display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px;
-}
-.footer-col h3{font-size:22px;margin-bottom:18px}
-.footer-col a,.footer-col p{display:block;color:#94a3b8;margin-bottom:10px;line-height:1.7}
-.footer-col a:hover{color:#06b6d4}
-.copy{text-align:center;margin-top:45px;color:#64748b}
-.copy a{color:#06b6d4;font-weight:800}
 
-.float-whatsapp{
-position:fixed;right:25px;bottom:25px;width:70px;height:70px;
-background:#22c55e;color:white;border-radius:50%;display:grid;place-items:center;
-font-size:32px;box-shadow:0 0 35px rgba(34,197,94,.45);z-index:999;
+footer a{
+color:#06b6d4;
+text-decoration:none;
+font-weight:700;
 }
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:72px;
+height:72px;
+border-radius:50%;
+background:#22c55e;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 30px rgba(34,197,94,.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.08)}
+100%{transform:scale(1)}
+}
+
+/* RESPONSIVE */
 
 @media(max-width:900px){
-.menu{display:none}
-.hero-wrap,.contact-box{grid-template-columns:1fr}
-.hero h1{font-size:42px}
-.hero-card img{height:360px}
-.section-title h2{font-size:34px}
+
+.hero h1{
+font-size:48px;
 }
+
+.section-title h2{
+font-size:38px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="bg"></div>
+<div class="glow"></div>
+
 <header>
-<nav class="nav">
-<a class="logo" href="#home">
-<span class="logo-box">IN</span>
-ImmoNova
-</a>
+
+<div class="nav">
+
+<div class="logo">
+<div class="logo-box">FP</div>
+Formationprot
+</div>
 
 <div class="menu">
-<a href="#biens">Biens</a>
-
-<div class="dropdown">
-<a href="#services">Services ▾</a>
-<div class="dropdown-menu">
-<a href="#services">🏠 Achat & vente</a>
-<a href="#services">🔑 Location</a>
-<a href="#services">📸 Photos premium</a>
-<a href="#services">📍 Visites rapides</a>
-<a href="#services">💼 Accompagnement complet</a>
-</div>
-</div>
-
-<a href="#avis">Avis</a>
-
-<div class="dropdown">
-<a href="#contact">Contact ▾</a>
-<div class="dropdown-menu">
-<a href="#contact">📝 Demander une visite</a>
-<a href="#contact">🏠 Acheter un bien</a>
-<a href="#contact">🔑 Louer un bien</a>
-<a href="#contact">💼 Vendre un bien</a>
-<a href="mailto:formationprot@gmail.com">✉️ Email</a>
-</div>
-</div>
-
-<a class="nav-cta" href="#contact">Contact</a>
-</div>
-</nav>
-</header>
-
-<section class="hero" id="home">
-<div class="hero-wrap">
-<div>
-<div class="badge">🏡 Agence immobilière premium</div>
-<h1>Trouvez le bien idéal avec ImmoNova.</h1>
-<p>
-Découvrez des appartements, maisons et villas modernes avec accompagnement professionnel,
-photos premium et contact rapide.
-</p>
-<a href="#biens" class="btn">Voir les biens</a>
-<a href="#contact" class="btn btn-light">Demander une visite</a>
-</div>
-
-<div class="hero-card">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
-<div class="price-card">
-<span>À partir de</span>
-<strong>280 000 DT</strong>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section" id="biens">
-<div class="container">
-<div class="section-title">
-<span>Nos biens</span>
-<h2>Biens immobiliers disponibles</h2>
-</div>
-
-<div class="property-grid">
-
-<div class="property-card">
-<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop">
-<div class="property-content">
-<h3>Villa moderne</h3>
-<p>Villa haut standing avec jardin, terrasse et espace familial.</p>
-<div class="property-price">750 000 DT</div>
-</div>
-</div>
-
-<div class="property-card">
-<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop">
-<div class="property-content">
-<h3>Appartement luxe</h3>
-<p>Appartement moderne avec salon lumineux et excellente localisation.</p>
-<div class="property-price">320 000 DT</div>
-</div>
-</div>
-
-<div class="property-card">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
-<div class="property-content">
-<h3>Maison familiale</h3>
-<p>Maison spacieuse idéale pour famille proche des commodités.</p>
-<div class="property-price">480 000 DT</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section" id="services">
-<div class="container">
-<div class="section-title">
-<span>Services</span>
-<h2>Un accompagnement complet</h2>
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<div class="service-icon">🏠</div>
-<h3>Achat & vente</h3>
-<p>Estimation, publication, négociation et accompagnement complet.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🔑</div>
-<h3>Location</h3>
-<p>Appartements, maisons, bureaux et locaux commerciaux.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">📸</div>
-<h3>Photos premium</h3>
-<p>Présentation moderne et attractive des biens immobiliers.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">📍</div>
-<h3>Visites rapides</h3>
-<p>Organisation des visites et contact direct avec les clients.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section" id="avis">
-<div class="container">
-<div class="section-title">
-<span>Avis</span>
-<h2>Clients satisfaits</h2>
-</div>
-
-<div class="services-grid">
-<div class="service-card">
-<h3>⭐ Très professionnel</h3>
-<p>Service rapide, présentation claire et accompagnement sérieux.</p>
-</div>
-<div class="service-card">
-<h3>⭐ Belle expérience</h3>
-<p>Les biens sont bien présentés et le contact est simple.</p>
-</div>
-<div class="service-card">
-<h3>⭐ Agence moderne</h3>
-<p>Design professionnel, photos de qualité et recherche efficace.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section" id="contact">
-<div class="container">
-<div class="contact-box">
-
-<div>
-<div class="badge">📞 Contact rapide</div>
-<h2>Demander une visite</h2>
-<p>
-Envoyez vos informations et le service demandé : achat, vente,
-location ou visite d’un bien.
-</p>
-<p style="margin-top:18px">
-Email :
-<a href="mailto:formationprot@gmail.com" style="color:#2563eb;font-weight:800">
-formationprot@gmail.com
-</a>
-</p>
-</div>
-
-<div>
-<input type="text" id="nom" placeholder="Votre nom">
-
-<select id="service">
-<option value="">Choisir un service</option>
-<option value="Achat">🏠 Achat</option>
-<option value="Vente">💼 Vente</option>
-<option value="Location">🔑 Location</option>
-<option value="Visite">📍 Demander une visite</option>
-</select>
-
-<textarea id="message" placeholder="Votre message"></textarea>
-
-<button onclick="sendMail()">Envoyer la demande</button>
-</div>
-
-</div>
-</div>
-</section>
-
-<footer>
-<div class="footer-grid">
-
-<div class="footer-col">
-<h3>ImmoNova</h3>
-<p>Démo immobilière professionnelle créée pour présenter des biens, services et demandes de visite.</p>
-</div>
-
-<div class="footer-col">
-<h3>Services</h3>
-<a href="#services">Achat & vente</a>
-<a href="#services">Location</a>
-<a href="#services">Photos premium</a>
-<a href="#services">Visites rapides</a>
-</div>
-
-<div class="footer-col">
-<h3>Navigation</h3>
-<a href="#biens">Biens</a>
-<a href="#services">Services</a>
-<a href="#avis">Avis</a>
+<a href="#demos">Démos</a>
+<a href="#reels">Reels</a>
 <a href="#contact">Contact</a>
 </div>
 
-<div class="footer-col">
-<h3>Contact</h3>
-<a href="mailto:formationprot@gmail.com">formationprot@gmail.com</a>
-<a href="https://majdi2003007-beep.github.io/formationprot/">Formationprot</a>
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>
+Des <span class="gradient">sites web modernes</span><br>
+et des reels professionnels.
+</h1>
+
+<p>
+Formationprot crée des sites web modernes, des boutiques e-commerce,
+des reels TikTok/Facebook, du montage vidéo professionnel et des solutions digitales premium.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#demos" class="btn btn-primary">
+Voir les démos
+</a>
+
+<a href="mailto:formationprot@gmail.com" class="btn btn-secondary">
+formationprot@gmail.com
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="demos">
+
+<div class="container">
+
+<div class="section-title">
+<span>Démos & sites réels</span>
+<h2>Exemples de sites professionnels</h2>
+</div>
+
+<div class="demo-grid">
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>Site vitrine entreprise</h3>
+
+<p>
+Site moderne professionnel pour entreprise, agence ou business digital.
+</p>
+
+<a href="https://www.apple.com" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
+</div>
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>E-commerce professionnel</h3>
+
+<p>
+Boutique en ligne moderne avec catalogue, paiement et design premium.
+</p>
+
+<a href="https://www.kivacollection.tn" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
+</div>
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>Site immobilier</h3>
+
+<p>
+Plateforme immobilière moderne avec annonces et formulaires professionnels.
+</p>
+
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
+</div>
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>Site restaurant</h3>
+
+<p>
+Site moderne restaurant avec menu, réservation et présentation premium.
+</p>
+
+<a href="https://www.mcdonalds.com" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
+</div>
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>Plateforme de formation</h3>
+
+<p>
+Site de formation moderne avec cours, vidéos et espace étudiant.
+</p>
+
+<a href="https://www.udemy.com" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
+</div>
+
+<div class="demo-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="demo-content">
+<h3>Agence digitale</h3>
+
+<p>
+Design moderne d’agence digitale avec marketing et publicité premium.
+</p>
+
+<a href="https://www.behance.net" target="_blank">
+Voir démo →
+</a>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="copy">
+</div>
+
+</section>
+
+<section class="section" id="reels">
+
+<div class="container">
+
+<div class="section-title">
+<span>Reels & vidéos</span>
+<h2>Exemples de reels professionnels</h2>
+</div>
+
+<div class="reels-grid">
+
+<div class="reel-card">
+
+<video controls poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
+<source src="https://cdn.coverr.co/videos/coverr-working-on-a-laptop-5176/1080p.mp4" type="video/mp4">
+</video>
+
+<h3>Reel Business</h3>
+
+<p>
+Reel TikTok/Facebook dynamique pour entreprise et business digital.
+</p>
+
+</div>
+
+<div class="reel-card">
+
+<video controls poster="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
+<source src="https://cdn.coverr.co/videos/coverr-typing-on-computer-1564843335748/1080p.mp4" type="video/mp4">
+</video>
+
+<h3>Montage Vidéo PRO</h3>
+
+<p>
+Montage moderne avec narration, musique et effets TikTok.
+</p>
+
+</div>
+
+<div class="reel-card">
+
+<video controls poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+<source src="https://cdn.coverr.co/videos/coverr-team-working-1572/1080p.mp4" type="video/mp4">
+</video>
+
+<h3>Publicité Digitale</h3>
+
+<p>
+Publicités Facebook et Instagram professionnelles avec style moderne.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta" id="contact">
+
+<div class="cta-box">
+
+<h2>
+🚀 Développez votre présence digitale
+</h2>
+
+<p>
+Sites web modernes, reels TikTok/Facebook, montage vidéo,
+publicité digitale et solutions professionnelles.
+</p>
+
+<a href="mailto:formationprot@gmail.com" class="btn btn-primary">
+📩 formationprot@gmail.com
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
 Created by
-<a href="https://majdi2003007-beep.github.io/formationprot/">
+<a href="#">
 Formationprot
 </a>
 — © 2026 Tous droits réservés.
-</div>
+</p>
+
 </footer>
 
-<a class="float-whatsapp" href="#contact">💬</a>
-
-<script>
-function sendMail(){
-let nom=document.getElementById("nom").value;
-let service=document.getElementById("service").value;
-let message=document.getElementById("message").value;
-
-let subject="Demande ImmoNova - " + service;
-let body=
-"Nom : " + nom + "%0D%0A" +
-"Service : " + service + "%0D%0A" +
-"Message : " + message;
-
-window.location.href="mailto:formationprot@gmail.com?subject="+subject+"&body="+body;
-}
-</script>
+<a class="whatsapp" href="#">
+💬
+</a>
 
 </body>
 </html>
