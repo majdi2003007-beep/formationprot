@@ -3,383 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formationprot — Démos Professionnelles</title>
+<title>Formationprot — Digital • Formation • Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#020617;
-color:white;
-overflow-x:hidden;
-}
-
-/* BACKGROUND */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:100px}
+body{font-family:Poppins,sans-serif;background:#020617;color:white;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
 
 .bg{
-position:fixed;
-inset:0;
-z-index:-2;
-background:
-linear-gradient(rgba(2,6,23,.88),rgba(2,6,23,.92)),
+position:fixed;inset:0;z-index:-2;
+background:linear-gradient(rgba(2,6,23,.88),rgba(2,6,23,.95)),
 url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
+background-size:cover;background-position:center;
 }
-
 .glow{
-position:fixed;
-width:500px;
-height:500px;
-background:#2563eb55;
-filter:blur(120px);
-border-radius:50%;
-top:-120px;
-right:-120px;
-z-index:-1;
+position:fixed;width:500px;height:500px;background:#2563eb55;
+filter:blur(120px);border-radius:50%;top:-120px;right:-120px;z-index:-1;
 }
-
-/* HEADER */
 
 header{
-position:sticky;
-top:0;
-z-index:999;
+position:sticky;top:0;z-index:999;
 backdrop-filter:blur(15px);
-background:rgba(2,6,23,.75);
+background:rgba(2,6,23,.8);
 border-bottom:1px solid rgba(255,255,255,.08);
 }
-
 .nav{
-max-width:1200px;
-margin:auto;
-padding:18px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+max-width:1200px;margin:auto;padding:18px 20px;
+display:flex;justify-content:space-between;align-items:center;
 }
-
-.logo{
-display:flex;
-align-items:center;
-gap:14px;
-font-size:28px;
-font-weight:800;
-}
-
+.logo{display:flex;align-items:center;gap:14px;font-size:28px;font-weight:900}
 .logo-box{
-width:55px;
-height:55px;
-border-radius:16px;
+width:55px;height:55px;border-radius:16px;
 background:linear-gradient(135deg,#2563eb,#06b6d4);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-font-weight:800;
+display:flex;align-items:center;justify-content:center;
 box-shadow:0 0 30px rgba(37,99,235,.45);
 }
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{font-weight:600;transition:.3s}
+.menu a:hover{color:#06b6d4}
 
-.menu{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+.dropdown{position:relative;padding:14px 0}
+.dropdown-menu{
+display:none;position:absolute;top:48px;left:0;min-width:260px;
+background:#020617;border:1px solid rgba(255,255,255,.12);
+border-radius:18px;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,.45)
 }
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:12px;border-radius:12px;color:white;white-space:nowrap}
+.dropdown-menu a:hover{background:rgba(255,255,255,.08);color:#06b6d4}
 
-.menu a{
-color:white;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-.menu a:hover{
-color:#06b6d4;
-}
-
-/* HERO */
-
-.hero{
-padding:120px 20px 90px;
-text-align:center;
-}
-
-.hero h1{
-font-size:70px;
-font-weight:800;
-line-height:1.05;
-margin-bottom:20px;
-}
-
-.gradient{
-background:linear-gradient(90deg,#3b82f6,#06b6d4);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-max-width:850px;
-margin:auto;
-font-size:20px;
-line-height:1.9;
-color:#cbd5e1;
-}
-
-.hero-buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-}
-
+.hero{padding:120px 20px 90px;text-align:center}
+.hero h1{font-size:70px;font-weight:900;line-height:1.05;margin-bottom:20px}
+.gradient{background:linear-gradient(90deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:850px;margin:auto;font-size:20px;line-height:1.9;color:#cbd5e1}
+.hero-buttons{margin-top:35px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
 .btn{
-padding:16px 28px;
-border-radius:18px;
-text-decoration:none;
-font-weight:700;
-transition:.3s;
-display:inline-block;
+padding:16px 28px;border-radius:18px;font-weight:800;transition:.3s;display:inline-block
 }
+.btn-primary{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;box-shadow:0 0 35px rgba(37,99,235,.4)}
+.btn-secondary{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:white}
+.btn:hover{transform:translateY(-5px)}
 
-.btn-primary{
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
-box-shadow:0 0 35px rgba(37,99,235,.4);
+.section{padding:100px 20px}
+.container{max-width:1200px;margin:auto}
+.section-title{text-align:center;margin-bottom:65px}
+.section-title span{color:#06b6d4;font-weight:800}
+.section-title h2{font-size:52px;margin-top:12px}
+
+.demo-grid,.site-grid,.reels-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;
 }
-
-.btn-primary:hover{
-transform:translateY(-5px);
-}
-
-.btn-secondary{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.08);
-color:white;
-}
-
-/* SECTION */
-
-.section{
-padding:100px 20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:65px;
-}
-
-.section-title span{
-color:#06b6d4;
-font-weight:700;
-}
-
-.section-title h2{
-font-size:52px;
-margin-top:12px;
-}
-
-/* DEMOS */
-
-.demo-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:32px;
-}
-
-.demo-card{
+.demo-card,.site-card,.reel-card{
 background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.08);
-border-radius:28px;
-overflow:hidden;
-transition:.45s;
-backdrop-filter:blur(18px);
-position:relative;
+border-radius:28px;overflow:hidden;transition:.45s;backdrop-filter:blur(18px)
 }
-
-.demo-card:hover{
-transform:translateY(-12px) scale(1.02);
-box-shadow:0 0 40px rgba(37,99,235,.25);
+.demo-card:hover,.site-card:hover,.reel-card:hover{
+transform:translateY(-12px);box-shadow:0 0 40px rgba(37,99,235,.25)
 }
-
-.demo-card img{
-width:100%;
-height:230px;
-object-fit:cover;
-}
-
-.demo-content{
-padding:28px;
-}
-
-.demo-content h3{
-font-size:28px;
-margin-bottom:12px;
-}
-
-.demo-content p{
-color:#cbd5e1;
-line-height:1.8;
-margin-bottom:18px;
-}
-
-.demo-content a{
-display:inline-block;
-padding:13px 20px;
-border-radius:14px;
+.demo-card img,.site-card img{width:100%;height:230px;object-fit:cover}
+.demo-content,.site-content{padding:28px}
+.demo-content h3,.site-content h3{font-size:28px;margin-bottom:12px}
+.demo-content p,.site-content p,.reel-card p{color:#cbd5e1;line-height:1.8;margin-bottom:18px}
+.demo-content a,.site-content a{
+display:inline-block;padding:13px 20px;border-radius:14px;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
-color:white;
-text-decoration:none;
-font-weight:700;
-transition:.3s;
+color:white;font-weight:800
 }
 
-.demo-content a:hover{
-transform:translateY(-3px);
-}
-
-/* REELS SECTION */
-
-.reels-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.reel-card{
+.site-section{
+margin-top:45px;padding:45px;border-radius:35px;
 background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.08);
-border-radius:28px;
-padding:25px;
-text-align:center;
-backdrop-filter:blur(15px);
-transition:.4s;
+display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center
 }
+.site-section h3{font-size:42px;margin-bottom:18px}
+.site-section p{color:#cbd5e1;line-height:1.8;margin-bottom:18px}
+.site-section ul{list-style:none;color:#cbd5e1;line-height:2}
+.site-section img{width:100%;height:330px;object-fit:cover;border-radius:25px}
 
-.reel-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 35px rgba(37,99,235,.25);
-}
+.reel-card{padding:25px;text-align:center}
+.reel-card video{width:100%;border-radius:20px;margin-bottom:20px;background:#000}
+.reel-card h3{font-size:24px;margin-bottom:12px}
 
-.reel-card video{
-width:100%;
-border-radius:20px;
-margin-bottom:20px;
-}
-
-.reel-card h3{
-font-size:24px;
-margin-bottom:12px;
-}
-
-.reel-card p{
-color:#cbd5e1;
-line-height:1.8;
-}
-
-/* CTA */
-
-.cta{
-padding:110px 20px;
-text-align:center;
-}
-
+.cta{padding:110px 20px;text-align:center}
 .cta-box{
-max-width:1000px;
-margin:auto;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-padding:60px 35px;
-border-radius:35px;
-backdrop-filter:blur(20px);
+max-width:1000px;margin:auto;background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);padding:60px 35px;
+border-radius:35px;backdrop-filter:blur(20px)
 }
-
-.cta h2{
-font-size:52px;
-margin-bottom:20px;
-}
-
-.cta p{
-font-size:20px;
-color:#cbd5e1;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-/* FOOTER */
+.cta h2{font-size:52px;margin-bottom:20px}
+.cta p{font-size:20px;color:#cbd5e1;line-height:1.8;margin-bottom:30px}
 
 footer{
-padding:50px 20px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
-color:#94a3b8;
-margin-top:50px;
+padding:70px 20px 35px;background:#01040d;
+border-top:1px solid rgba(255,255,255,.08)
 }
-
-footer a{
-color:#06b6d4;
-text-decoration:none;
-font-weight:700;
+.footer-grid{
+max-width:1200px;margin:auto;
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px
 }
-
-/* WHATSAPP */
+.footer-col h3{font-size:22px;margin-bottom:18px}
+.footer-col p,.footer-col a{display:block;color:#94a3b8;margin-bottom:10px;line-height:1.7}
+.footer-col a:hover{color:#06b6d4}
+.copy{text-align:center;margin-top:45px;color:#64748b}
+.copy a{color:#06b6d4;font-weight:800}
 
 .whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-width:72px;
-height:72px;
-border-radius:50%;
-background:#22c55e;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-text-decoration:none;
-color:white;
-box-shadow:0 0 30px rgba(34,197,94,.4);
-animation:pulse 2s infinite;
+position:fixed;bottom:25px;right:25px;width:72px;height:72px;
+border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;
+font-size:32px;color:white;box-shadow:0 0 30px rgba(34,197,94,.4);animation:pulse 2s infinite
 }
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.08)}
-100%{transform:scale(1)}
-}
-
-/* RESPONSIVE */
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
 
 @media(max-width:900px){
-
-.hero h1{
-font-size:48px;
+.menu{display:none}
+.hero h1{font-size:46px}
+.section-title h2{font-size:36px}
+.site-section{grid-template-columns:1fr}
 }
-
-.section-title h2{
-font-size:38px;
-}
-
-.menu{
-display:none;
-}
-
-}
-
 </style>
 </head>
 
@@ -389,9 +154,7 @@ display:none;
 <div class="glow"></div>
 
 <header>
-
 <div class="nav">
-
 <div class="logo">
 <div class="logo-box">FP</div>
 Formationprot
@@ -399,175 +162,196 @@ Formationprot
 
 <div class="menu">
 <a href="#demos">Démos</a>
+
+<div class="dropdown">
+<a href="#sites">Sites créés ▾</a>
+<div class="dropdown-menu">
+<a href="#restaurant">🍽️ Restaurant</a>
+<a href="#gym">🏋️ Salle de sport</a>
+<a href="#formation">🎓 Formation</a>
+<a href="#medical">🏥 Cabinet médical</a>
+<a href="#immobilier">🏠 Immobilier</a>
+<a href="https://www.kivacollection.tn" target="_blank">🛒 Kiva Collection</a>
+</div>
+</div>
+
 <a href="#reels">Reels</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
-
 </header>
 
 <section class="hero">
-
 <h1>
 Des <span class="gradient">sites web modernes</span><br>
 et des reels professionnels.
 </h1>
 
 <p>
-Formationprot crée des sites web modernes, des boutiques e-commerce,
-des reels TikTok/Facebook, du montage vidéo professionnel et des solutions digitales premium.
+Formationprot crée des sites web, boutiques e-commerce, sites immobiliers,
+reels TikTok/Facebook, montage vidéo et publicités digitales premium.
 </p>
 
 <div class="hero-buttons">
-
-<a href="#demos" class="btn btn-primary">
-Voir les démos
-</a>
-
-<a href="mailto:formationprot@gmail.com" class="btn btn-secondary">
-formationprot@gmail.com
-</a>
-
+<a href="#demos" class="btn btn-primary">Voir les démos</a>
+<a href="mailto:formationprot@gmail.com" class="btn btn-secondary">formationprot@gmail.com</a>
 </div>
-
 </section>
 
 <section class="section" id="demos">
-
 <div class="container">
-
 <div class="section-title">
-<span>Démos & sites réels</span>
-<h2>Exemples de sites professionnels</h2>
+<span>Démos Formationprot</span>
+<h2>Exemples de projets professionnels</h2>
 </div>
 
 <div class="demo-grid">
 
 <div class="demo-card">
-
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
-
-<div class="demo-content">
-<h3>Site vitrine entreprise</h3>
-
-<p>
-Site moderne professionnel pour entreprise, agence ou business digital.
-</p>
-
-<a href="https://www.apple.com" target="_blank">
-Voir démo →
-</a>
-
-</div>
-
-</div>
-
-<div class="demo-card">
-
 <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop">
-
 <div class="demo-content">
-<h3>E-commerce professionnel</h3>
-
-<p>
-Boutique en ligne moderne avec catalogue, paiement et design premium.
-</p>
-
-<a href="https://www.kivacollection.tn" target="_blank">
-Voir démo →
-</a>
-
+<h3>Kiva Collection</h3>
+<p>Boutique e-commerce réelle avec catalogue produits et design moderne.</p>
+<a href="https://www.kivacollection.tn" target="_blank">Voir site réel →</a>
 </div>
-
 </div>
 
 <div class="demo-card">
-
 <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
-
 <div class="demo-content">
-<h3>Site immobilier</h3>
-
-<p>
-Plateforme immobilière moderne avec annonces et formulaires professionnels.
-</p>
-
-<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">
-Voir démo →
-</a>
-
+<h3>Agence immobilière</h3>
+<p>Démo immobilière complète avec biens, services et contact rapide.</p>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">Voir démo →</a>
 </div>
-
 </div>
 
 <div class="demo-card">
-
 <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
-
 <div class="demo-content">
-<h3>Site restaurant</h3>
-
-<p>
-Site moderne restaurant avec menu, réservation et présentation premium.
-</p>
-
-<a href="https://www.mcdonalds.com" target="_blank">
-Voir démo →
-</a>
-
+<h3>Restaurant premium</h3>
+<p>Modèle de site restaurant avec menu, réservation et présentation moderne.</p>
+<a href="#restaurant">Voir modèle →</a>
 </div>
-
 </div>
 
 <div class="demo-card">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop">
+<div class="demo-content">
+<h3>Salle de sport</h3>
+<p>Modèle de site fitness avec abonnements, coachs et programme.</p>
+<a href="#gym">Voir modèle →</a>
+</div>
+</div>
 
+<div class="demo-card">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
-
 <div class="demo-content">
-<h3>Plateforme de formation</h3>
-
-<p>
-Site de formation moderne avec cours, vidéos et espace étudiant.
-</p>
-
-<a href="https://www.udemy.com" target="_blank">
-Voir démo →
-</a>
-
+<h3>Centre de formation</h3>
+<p>Site professionnel pour formation, cours, inscriptions et programmes.</p>
+<a href="#formation">Voir modèle →</a>
 </div>
-
 </div>
 
 <div class="demo-card">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop">
 <div class="demo-content">
-<h3>Agence digitale</h3>
-
-<p>
-Design moderne d’agence digitale avec marketing et publicité premium.
-</p>
-
-<a href="https://www.behance.net" target="_blank">
-Voir démo →
-</a>
-
+<h3>Cabinet médical</h3>
+<p>Modèle médical avec rendez-vous, spécialités, horaires et contact.</p>
+<a href="#medical">Voir modèle →</a>
+</div>
 </div>
 
 </div>
+</div>
+</section>
 
+<section class="section" id="sites">
+<div class="container">
+<div class="section-title">
+<span>Sites créés par Formationprot</span>
+<h2>Modèles prêts pour les clients</h2>
+</div>
+
+<div class="site-section" id="restaurant">
+<div>
+<h3>🍽️ Site Restaurant</h3>
+<p>Un site moderne pour restaurant, café ou fast-food avec menu, galerie, réservation et bouton contact.</p>
+<ul>
+<li>✅ Menu digital</li>
+<li>✅ Réservation rapide</li>
+<li>✅ Galerie plats</li>
+<li>✅ Contact Messenger / Email</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander ce modèle</a>
+</div>
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="site-section" id="gym">
+<div>
+<h3>🏋️ Site Salle de sport</h3>
+<p>Un modèle puissant pour coach sportif, fitness club ou salle de musculation.</p>
+<ul>
+<li>✅ Programmes sportifs</li>
+<li>✅ Abonnements</li>
+<li>✅ Coachs</li>
+<li>✅ Photos et vidéos</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander ce modèle</a>
+</div>
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="site-section" id="formation">
+<div>
+<h3>🎓 Site Formation</h3>
+<p>Un site pour centre de formation, école privée, coaching ou cours en ligne.</p>
+<ul>
+<li>✅ Programmes</li>
+<li>✅ Formulaire inscription</li>
+<li>✅ Présentation formateurs</li>
+<li>✅ Planning et tarifs</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander ce modèle</a>
+</div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="site-section" id="medical">
+<div>
+<h3>🏥 Site Cabinet médical</h3>
+<p>Un site élégant pour médecin, cabinet, clinique, dentiste ou centre de soins.</p>
+<ul>
+<li>✅ Spécialités</li>
+<li>✅ Prise de rendez-vous</li>
+<li>✅ Horaires</li>
+<li>✅ Localisation</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Demander ce modèle</a>
+</div>
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="site-section" id="immobilier">
+<div>
+<h3>🏠 Site Immobilier</h3>
+<p>Un site immobilier pro avec annonces, photos, prix, services et formulaire de visite.</p>
+<ul>
+<li>✅ Biens disponibles</li>
+<li>✅ Achat / vente / location</li>
+<li>✅ Contact rapide</li>
+<li>✅ Design premium</li>
+</ul>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank" class="btn btn-primary">Ouvrir la démo</a>
+</div>
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop">
 </div>
 
 </div>
-
 </section>
 
 <section class="section" id="reels">
-
 <div class="container">
-
 <div class="section-title">
 <span>Reels & vidéos</span>
 <h2>Exemples de reels professionnels</h2>
@@ -576,89 +360,81 @@ Voir démo →
 <div class="reels-grid">
 
 <div class="reel-card">
-
 <video controls poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop">
 <source src="https://cdn.coverr.co/videos/coverr-working-on-a-laptop-5176/1080p.mp4" type="video/mp4">
 </video>
-
 <h3>Reel Business</h3>
-
-<p>
-Reel TikTok/Facebook dynamique pour entreprise et business digital.
-</p>
-
+<p>Reel TikTok/Facebook dynamique pour entreprise et business digital.</p>
 </div>
 
 <div class="reel-card">
-
 <video controls poster="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
 <source src="https://cdn.coverr.co/videos/coverr-typing-on-computer-1564843335748/1080p.mp4" type="video/mp4">
 </video>
-
 <h3>Montage Vidéo PRO</h3>
-
-<p>
-Montage moderne avec narration, musique et effets TikTok.
-</p>
-
+<p>Montage moderne avec narration, musique et effets TikTok.</p>
 </div>
 
 <div class="reel-card">
-
 <video controls poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
 <source src="https://cdn.coverr.co/videos/coverr-team-working-1572/1080p.mp4" type="video/mp4">
 </video>
-
 <h3>Publicité Digitale</h3>
-
-<p>
-Publicités Facebook et Instagram professionnelles avec style moderne.
-</p>
-
+<p>Publicités Facebook et Instagram professionnelles avec style moderne.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="cta" id="contact">
-
 <div class="cta-box">
-
-<h2>
-🚀 Développez votre présence digitale
-</h2>
-
+<h2>🚀 Développez votre présence digitale</h2>
 <p>
-Sites web modernes, reels TikTok/Facebook, montage vidéo,
-publicité digitale et solutions professionnelles.
+Sites web modernes, e-commerce, immobilier, restaurants, salles de sport,
+formations, reels TikTok/Facebook, montage vidéo et publicité digitale.
 </p>
-
-<a href="mailto:formationprot@gmail.com" class="btn btn-primary">
-📩 formationprot@gmail.com
-</a>
-
+<a href="mailto:formationprot@gmail.com" class="btn btn-primary">📩 formationprot@gmail.com</a>
 </div>
-
 </section>
 
 <footer>
+<div class="footer-grid">
 
-<p>
-Created by
-<a href="#">
-Formationprot
-</a>
-— © 2026 Tous droits réservés.
-</p>
+<div class="footer-col">
+<h3>Formationprot</h3>
+<p>Agence digitale spécialisée en sites web, reels, montage vidéo, e-commerce et publicité digitale.</p>
+</div>
 
+<div class="footer-col">
+<h3>Démos</h3>
+<a href="#restaurant">Restaurant</a>
+<a href="#gym">Salle de sport</a>
+<a href="#formation">Formation</a>
+<a href="#medical">Cabinet médical</a>
+<a href="#immobilier">Immobilier</a>
+</div>
+
+<div class="footer-col">
+<h3>Sites réels</h3>
+<a href="https://www.kivacollection.tn" target="_blank">Kiva Collection</a>
+<a href="https://majdi2003007-beep.github.io/formationprot/agence-immobiliere/" target="_blank">Agence immobilière</a>
+</div>
+
+<div class="footer-col">
+<h3>Contact</h3>
+<a href="mailto:formationprot@gmail.com">formationprot@gmail.com</a>
+<a href="#contact">Demander un devis</a>
+</div>
+
+</div>
+
+<div class="copy">
+Created by <a href="#">Formationprot</a> — © 2026 Tous droits réservés.
+</div>
 </footer>
 
-<a class="whatsapp" href="#">
-💬
-</a>
+<a class="whatsapp" href="mailto:formationprot@gmail.com">💬</a>
 
 </body>
 </html>
