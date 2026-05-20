@@ -3,142 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formationprot — Digital • Formation • Solutions</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+<title>Démos – Formationprot</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Poppins,sans-serif;
-  background:#020617;
-  color:white;
-}
+body{margin:0;font-family:Poppins;background:#020617;color:#fff}
 .section{padding:100px 20px}
 .container{max-width:1200px;margin:auto}
-.section-title{text-align:center;margin-bottom:60px}
-.section-title span{color:#06b6d4;font-weight:700}
-.section-title h2{font-size:46px;margin-top:10px}
-
-.demo-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.demo-card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:26px;
-  overflow:hidden;
-  transition:.4s;
-}
-.demo-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 35px rgba(37,99,235,.25);
-}
-
-.demo-card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.demo-content{
-  padding:25px;
-}
-.demo-content h3{
-  font-size:26px;
-  margin-bottom:10px;
-}
-.demo-content p{
-  color:#cbd5e1;
-  line-height:1.7;
-  margin-bottom:15px;
-}
-.demo-content a{
-  color:#06b6d4;
-  text-decoration:none;
-  font-weight:700;
-}
-footer{
-  text-align:center;
-  padding:40px 20px;
-  color:#94a3b8;
-  border-top:1px solid rgba(255,255,255,.08);
-}
+h1{text-align:center;font-size:46px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:60px}
+.card{background:rgba(255,255,255,.06);border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card div{padding:24px}
+.card h3{margin:0 0 10px}
+.card p{color:#cbd5e1;font-size:15px}
+.card a{display:inline-block;margin-top:12px;color:#06b6d4;font-weight:700;text-decoration:none}
 </style>
 </head>
-
 <body>
 
-<section class="section" id="demos">
-  <div class="container">
+<section class="section">
+<div class="container">
+<h1>Sites démos professionnels</h1>
 
-    <div class="section-title">
-      <span>Démos & sites réels</span>
-      <h2>Exemples de sites web professionnels</h2>
-    </div>
+<div class="grid">
 
-    <div class="demo-grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div>
+<h3>Site vitrine – Entreprise</h3>
+<p>Agence, services, présentation professionnelle.</p>
+<a href="demo-agence.html">Voir le site →</a>
+</div>
+</div>
 
-      <div class="demo-card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
-        <div class="demo-content">
-          <h3>Site vitrine – Entreprise</h3>
-          <p>Exemple réel de site professionnel moderne pour entreprise.</p>
-          <a href="https://www.apple.com" target="_blank">Voir site réel →</a>
-        </div>
-      </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<div>
+<h3>E‑commerce</h3>
+<p>Boutique moderne avec produits et panier.</p>
+<a href="demo-shop.html">Voir le site →</a>
+</div>
+</div>
 
-      <div class="demo-card">
-        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop">
-        <div class="demo-content">
-          <h3>E‑commerce professionnel</h3>
-          <p>Boutique en ligne réelle avec catalogue et paiement.</p>
-          <a href="https://www.nike.com" target="_blank">Voir site réel →</a>
-        </div>
-      </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
+<div>
+<h3>Immobilier</h3>
+<p>Annonces, biens, contact WhatsApp.</p>
+<a href="demo-immo.html">Voir le site →</a>
+</div>
+</div>
 
-      <div class="demo-card">
-        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
-        <div class="demo-content">
-          <h3>Site immobilier</h3>
-          <p>Site immobilier réel avec annonces et formulaires.</p>
-          <a href="https://www.zillow.com" target="_blank">Voir site réel →</a>
-        </div>
-      </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+<div>
+<h3>Restaurant</h3>
+<p>Menu, réservation, présentation.</p>
+<a href="demo-restaurant.html">Voir le site →</a>
+</div>
+</div>
 
-      <div class="demo-card">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
-        <div class="demo-content">
-          <h3>Site restaurant</h3>
-          <p>Site réel de restaurant avec menu et réservation.</p>
-          <a href="https://www.mcdonalds.com" target="_blank">Voir site réel →</a>
-        </div>
-      </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div>
+<h3>Formation</h3>
+<p>Cours, programmes, inscription.</p>
+<a href="demo-formation.html">Voir le site →</a>
+</div>
+</div>
 
-      <div class="demo-card">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
-        <div class="demo-content">
-          <h3>Plateforme de formation</h3>
-          <p>Site réel de formation et cours en ligne.</p>
-          <a href="https://www.udemy.com" target="_blank">Voir site réel →</a>
-        </div>
-      </div>
-
-    </div>
-
-    <p style="text-align:center;color:#94a3b8;margin-top:30px;font-size:14px;">
-      * Exemples de sites réels similaires à ceux que nous réalisons pour nos clients.
-    </p>
-
-  </div>
+</div>
+</div>
 </section>
-
-<footer>
-  © 2026 Formationprot — Tous droits réservés
-</footer>
 
 </body>
 </html>
