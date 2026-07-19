@@ -1898,3 +1898,121 @@ button {
     font-size: 11px;
   }
 }
+/* ========================================
+   AJUSTEMENT HERO — VERSION PLUS AÉRÉE
+======================================== */
+
+.hero {
+  min-height: 88vh;
+  padding:
+    calc(var(--header-height) + 55px)
+    0
+    65px;
+}
+
+.hero-grid {
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(360px, 0.92fr);
+  gap: 55px;
+}
+
+.hero h1 {
+  max-width: 680px;
+  font-size: clamp(40px, 4.4vw, 62px);
+  line-height: 1.07;
+  letter-spacing: -2.4px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  margin-top: 26px;
+}
+
+.hero-benefits {
+  margin-top: 22px;
+  gap: 12px 18px;
+}
+
+.hero-visual {
+  min-height: 450px;
+}
+
+.browser-card {
+  width: 90%;
+  transform:
+    perspective(1200px)
+    rotateY(-2deg);
+}
+
+.browser-content {
+  min-height: 330px;
+  padding: 20px;
+}
+
+.mini-hero {
+  padding: 38px 8px 24px;
+}
+
+.mini-hero h2 {
+  max-width: 330px;
+  font-size: clamp(20px, 2.3vw, 29px);
+}
+
+.floating-card {
+  min-width: 200px;
+  padding: 12px;
+}
+
+.floating-card-one {
+  left: -15px;
+  bottom: 38px;
+}
+
+.floating-card-two {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    gap: 45px;
+  }
+
+  .browser-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding-top:
+      calc(var(--header-height) + 45px);
+    padding-bottom: 55px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .browser-content {
+    min-height: 280px;
+  }
+}
