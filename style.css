@@ -2016,3 +2016,427 @@ button {
     min-height: 280px;
   }
 }
+
+/* =========================================================
+   FORMATIONPROT — FINITIONS PREMIUM 2026
+   À conserver à la fin du fichier
+========================================================= */
+
+:root {
+  --primary-hover: #3b82f6;
+  --surface: rgba(15, 23, 42, 0.72);
+  --surface-strong: rgba(15, 23, 42, 0.94);
+  --ring: rgba(56, 189, 248, 0.38);
+  --shadow-soft: 0 18px 55px rgba(0, 0, 0, 0.24);
+  --shadow-premium: 0 32px 90px rgba(0, 0, 0, 0.42);
+}
+
+/* Accessibilité et confort */
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.75);
+  color: #fff;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header plus net au scroll */
+.header {
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.16);
+}
+
+.logo-icon,
+.btn-primary,
+.nav-cta,
+.service-icon,
+.process-number,
+.contact-icon {
+  background-size: 160% 160%;
+}
+
+/* Hero équilibré et moins encombré */
+.hero-content {
+  position: relative;
+  z-index: 4;
+}
+
+.hero-badge {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+.hero-description {
+  text-wrap: pretty;
+}
+
+.browser-card {
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.035) inset;
+}
+
+.browser-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 32%);
+  opacity: .55;
+}
+
+/* Boutons plus professionnels */
+.btn,
+.nav-cta {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn::before,
+.nav-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.18), transparent 65%);
+  transform: translateX(-130%);
+  transition: transform .65s ease;
+}
+
+.btn:hover::before,
+.nav-cta:hover::before {
+  transform: translateX(130%);
+}
+
+/* Cartes homogènes */
+.service-card,
+.project-card,
+.reel-card,
+.process-card,
+.faq-item,
+.contact-form,
+.why-item {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.service-card::after,
+.process-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 20px 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, .65), transparent);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.service-card:hover::after,
+.process-card:hover::after {
+  opacity: 1;
+}
+
+.project-content h3,
+.reel-content h3,
+.service-card h3,
+.process-card h3 {
+  text-wrap: balance;
+}
+
+.project-content > a,
+.service-card a {
+  transition: color .25s ease, gap .25s ease, transform .25s ease;
+}
+
+.project-content > a:hover,
+.service-card a:hover {
+  color: #cffafe;
+}
+
+/* Section statistiques prête pour le HTML */
+.stats-section {
+  padding: 45px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, rgba(37,99,235,.08), rgba(124,58,237,.08));
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stat-card {
+  padding: 26px 20px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255,255,255,.035);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.stat-number {
+  display: block;
+  margin-bottom: 4px;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #60a5fa, #22d3ee, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Témoignages prêts pour le HTML */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.testimonial-card {
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(15,23,42,.86), rgba(7,17,38,.86));
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s ease, border-color .35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(59,130,246,.45);
+}
+
+.testimonial-stars {
+  margin-bottom: 17px;
+  color: #facc15;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+.testimonial-card > p {
+  margin-bottom: 22px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  font-weight: 800;
+}
+
+.testimonial-author strong,
+.testimonial-author small {
+  display: block;
+}
+
+.testimonial-author strong {
+  font-size: 13px;
+}
+
+.testimonial-author small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* CTA final prêt pour le HTML */
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 82px 0;
+}
+
+.final-cta-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 35px;
+  padding: 50px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(34,211,238,.2), transparent 30%),
+    linear-gradient(135deg, rgba(37,99,235,.25), rgba(124,58,237,.22));
+  box-shadow: var(--shadow-premium);
+}
+
+.final-cta-card::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -90px;
+  bottom: -150px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  filter: blur(2px);
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta h2 {
+  max-width: 720px;
+  margin-bottom: 14px;
+  font-size: clamp(31px, 4vw, 51px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  text-wrap: balance;
+}
+
+.final-cta p {
+  max-width: 660px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.final-cta-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Formulaire : feedback visuel */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: rgba(148, 163, 184, .35);
+}
+
+.form-submit:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+  transform: none;
+}
+
+/* WhatsApp plus visible sans gêner */
+.floating-whatsapp {
+  isolation: isolate;
+}
+
+.floating-whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid rgba(34,197,94,.45);
+  animation: whatsappPulse 2.4s ease-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0% { transform: scale(.9); opacity: .8; }
+  75%, 100% { transform: scale(1.28); opacity: 0; }
+}
+
+/* Responsive des nouvelles sections */
+@media (max-width: 1050px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .final-cta-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-grid {
+    gap: 38px;
+  }
+
+  .hero-badge {
+    padding: 8px 13px;
+    font-size: 11px;
+  }
+
+  .browser-top {
+    height: 48px;
+  }
+
+  .stats-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card:last-child {
+    grid-column: auto;
+  }
+
+  .final-cta {
+    padding: 60px 0;
+  }
+
+  .final-cta-card {
+    padding: 30px 22px;
+    border-radius: 23px;
+  }
+
+  .final-cta-actions,
+  .final-cta-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Respect des préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
