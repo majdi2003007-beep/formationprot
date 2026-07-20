@@ -2,60 +2,161 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Démo Formationprot</title>
-<link rel="stylesheet" href="style.css?v=3">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Site vitrine professionnel en Tunisie | Formationprot</title>
+<meta name="description" content="Formationprot crée des sites vitrines professionnels, rapides, responsives et adaptés aux entreprises et indépendants en Tunisie.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#020617">
+<link rel="canonical" href="https://formationprot.netlify.app/site-vitrine.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020617;--soft:#071126;--card:rgba(15,23,42,.86);--line:rgba(255,255,255,.1);--p:#2563eb;--s:#7c3aed;--c:#06b6d4;--g:#22c55e;--w:#fff;--t:#cbd5e1;--m:#94a3b8;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:Poppins,Arial,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(37,99,235,.2),transparent 28%),radial-gradient(circle at 85% 20%,rgba(124,58,237,.16),transparent 28%),var(--bg);color:var(--w);line-height:1.65;overflow-x:hidden}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.container{width:min(calc(100% - 32px),var(--max));margin:auto}.section{padding:95px 0}.dark{background:linear-gradient(180deg,rgba(7,17,38,.94),rgba(2,6,23,.97));border-block:1px solid var(--line)}
+header{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(2,6,23,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:23px}.logo b{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--p),var(--c))}.logo span span{color:var(--c)}.menu{display:flex;gap:21px}.menu a{font-size:14px;color:var(--t);font-weight:600}.cta-small,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;font-weight:700;transition:.25s}.cta-small{padding:12px 18px;background:linear-gradient(135deg,var(--p),var(--s));font-size:14px}.btn{min-height:53px;padding:14px 23px;border:1px solid transparent}.btn.primary{background:linear-gradient(135deg,var(--p),var(--s));box-shadow:0 15px 38px rgba(37,99,235,.25)}.btn.secondary{border-color:var(--line);background:rgba(255,255,255,.06)}.btn:hover,.cta-small:hover{transform:translateY(-3px)}
+.toggle{display:none;width:45px;height:45px;border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:12px}.toggle i{display:block;width:20px;height:2px;background:#fff;margin:5px auto}
+.hero{min-height:92vh;display:flex;align-items:center;padding:140px 0 75px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:65px}.badge{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border-radius:999px;border:1px solid rgba(6,182,212,.25);background:rgba(6,182,212,.08);color:#a5f3fc;font-size:13px;font-weight:700;margin-bottom:21px}.badge:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 14px rgba(34,197,94,.8)}h1{font-size:clamp(41px,5vw,67px);line-height:1.05;letter-spacing:-2.7px;margin-bottom:21px}.grad{background:linear-gradient(90deg,#3b82f6,var(--c),#a78bfa);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{font-size:17px;color:var(--t);max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:29px}.points{display:flex;flex-wrap:wrap;gap:12px 19px;margin-top:24px}.points span{font-size:13px;color:var(--t)}.points span:before{content:"✓";color:#86efac;margin-right:7px}
+.visual{position:relative;padding:13px;border:1px solid var(--line);border-radius:27px;background:rgba(255,255,255,.05);box-shadow:0 30px 80px rgba(0,0,0,.35)}.visual img{width:100%;height:500px;object-fit:cover;border-radius:19px}.float{position:absolute;left:-28px;bottom:35px;padding:16px;border-radius:16px;border:1px solid var(--line);background:rgba(7,17,38,.96);box-shadow:0 20px 50px rgba(0,0,0,.35)}.float strong,.float small{display:block}.float small{color:var(--m)}
+.head{max-width:800px;margin:0 auto 55px;text-align:center}.label{color:#67e8f9;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:1px}.head h2,.split h2,.final h2{font-size:clamp(33px,4vw,52px);line-height:1.15;letter-spacing:-2px;margin-top:10px}.head p{color:var(--m);margin-top:17px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:21px}.card{padding:28px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,var(--card),rgba(7,17,38,.88));transition:.3s}.card:hover{transform:translateY(-7px);border-color:rgba(59,130,246,.45)}.icon{width:55px;height:55px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,rgba(37,99,235,.2),rgba(124,58,237,.15));font-size:25px;margin-bottom:19px}.card h3{font-size:20px;margin-bottom:10px}.card p{font-size:13px;color:var(--m)}
+.split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px}.split>div>p{color:var(--m);margin:20px 0 27px}.list{display:grid;gap:12px}.list div{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.05)}.list strong{display:block;font-size:14px}.list p{font-size:12px;color:var(--m)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--card)}.num{width:50px;height:50px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,rgba(37,99,235,.23),rgba(124,58,237,.18));color:#93c5fd;font-weight:800;margin-bottom:25px}.step h3{font-size:18px;margin-bottom:9px}.step p{font-size:13px;color:var(--m)}
+.offer{max-width:850px;margin:auto;padding:40px;border:1px solid rgba(59,130,246,.4);border-radius:26px;background:radial-gradient(circle at 20% 20%,rgba(37,99,235,.2),transparent 33%),linear-gradient(145deg,rgba(15,23,42,.96),rgba(7,17,38,.96));box-shadow:0 30px 80px rgba(0,0,0,.35)}.offer h3{font-size:27px}.offer p{color:var(--m);margin-top:8px}.included{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:27px 0}.included div{font-size:13px;color:var(--t)}.included div:before{content:"✓";color:#86efac;margin-right:9px}
+.faq{max-width:880px;margin:auto;display:grid;gap:12px}.faq article{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.05);overflow:hidden}.q{width:100%;display:flex;justify-content:space-between;gap:20px;padding:20px 22px;border:0;background:none;color:#fff;text-align:left;font-weight:700;cursor:pointer}.a{max-height:0;overflow:hidden;transition:.3s}.a p{padding:0 22px 20px;color:var(--m);font-size:13px}.faq article.active .a{max-height:180px}.final{padding:60px 25px;text-align:center;border:1px solid var(--line);border-radius:29px;background:radial-gradient(circle at 20% 20%,rgba(37,99,235,.23),transparent 35%),radial-gradient(circle at 85% 75%,rgba(124,58,237,.18),transparent 35%),linear-gradient(145deg,rgba(15,23,42,.96),rgba(7,17,38,.96))}.final p{max-width:660px;margin:17px auto 27px;color:var(--m)}
+footer{padding:55px 0 24px;border-top:1px solid var(--line);background:rgba(1,4,14,.9)}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}.foot p{color:var(--m);font-size:13px;margin-top:16px;max-width:350px}.col{display:flex;flex-direction:column;gap:10px}.col h3{font-size:15px}.col a{font-size:12px;color:var(--m)}.bottom{display:flex;justify-content:space-between;gap:20px;margin-top:40px;padding-top:19px;border-top:1px solid var(--line);font-size:11px;color:var(--m)}.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;display:grid;place-items:center;border-radius:50%;background:var(--g);border:4px solid rgba(255,255,255,.12);font-size:25px;z-index:40}.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:980px){.cta-small{display:none}.hero-grid,.split{grid-template-columns:1fr}.hero-content{text-align:center}.badge,.lead{margin-inline:auto}.actions,.points{justify-content:center}.visual{max-width:680px;margin:auto}.grid3{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:780px){.toggle{display:block}.menu{position:absolute;top:88px;left:16px;right:16px;display:none;flex-direction:column;padding:12px;border:1px solid var(--line);border-radius:16px;background:rgba(7,17,38,.98)}.menu.open{display:flex}.menu a{padding:11px}.hero{min-height:auto}.grid3,.steps,.included,.foot{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}.visual img{height:390px}.float{position:relative;left:auto;bottom:auto;margin:-22px 10px 0}.offer{padding:27px 20px}.bottom{flex-direction:column}}
+</style>
 </head>
 <body>
-
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <div class="logo">FP</div>
-      <div>Formationprot<small>Démo projet</small></div>
-    </a>
-    <nav class="menu">
-      <a href="index.html#demos">Retour aux démos</a>
-      <a class="whatsapp" href="https://wa.me/216XXXXXXXX">WhatsApp</a>
-    </nav>
-  </div>
+<header>
+<nav class="container">
+<a class="logo" href="index.html"><b>FP</b><span>Formation<span>prot</span></span></a>
+<button class="toggle" id="toggle" aria-label="Ouvrir le menu"><i></i><i></i><i></i></button>
+<div class="menu" id="menu"><a href="index.html">Accueil</a><a href="#avantages">Avantages</a><a href="#contenu">Contenu</a><a href="#methode">Méthode</a><a href="#offre">Offre</a><a href="#faq">FAQ</a></div>
+<a class="cta-small" target="_blank" rel="noopener" href="https://wa.me/21651649956?text=Bonjour%20Formationprot%2C%20je%20souhaite%20un%20site%20vitrine.">Demander un devis</a>
+</nav>
 </header>
 
+<main>
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge">Démo projet</span>
-      <h1>Site vitrine professionnel</h1>
-      <p>Page de démonstration Formationprot. Remplacez ce contenu par vos images, textes, tarifs ou liens réels.</p>
-      <div class="actions">
-        <a class="btn" href="https://wa.me/216XXXXXXXX">Demander similaire</a>
-        <a class="btn secondary" href="index.html#demos">Retour</a>
-      </div>
-    </div>
+<div class="container hero-grid">
+<div class="hero-content reveal">
+<span class="badge">Création de site vitrine en Tunisie</span>
+<h1>Présentez votre activité avec un <span class="grad">site professionnel.</span></h1>
+<p class="lead">Formationprot crée des sites modernes, rapides et adaptés aux mobiles pour inspirer confiance, présenter vos services et recevoir davantage de demandes.</p>
+<div class="actions">
+<a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/21651649956?text=Bonjour%20Formationprot%2C%20je%20souhaite%20un%20devis%20pour%20un%20site%20vitrine.">Recevoir un devis →</a>
+<a class="btn secondary" href="#offre">Voir ce qui est inclus</a>
+</div>
+<div class="points"><span>Design personnalisé</span><span>Compatible mobile</span><span>Mise en ligne accompagnée</span></div>
+</div>
+<div class="visual reveal">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Exemple de site vitrine professionnel">
+<div class="float"><strong>Site moderne et responsive</strong><small>Une image professionnelle sur tous les écrans</small></div>
+</div>
+</div>
+</section>
 
-    <div class="panel">
-      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80">
-    </div>
-  </div>
+<section class="section dark" id="avantages">
+<div class="container">
+<div class="head reveal"><span class="label">Pourquoi un site vitrine ?</span><h2>Transformez votre présence en ligne en outil commercial</h2><p>Votre site devient votre présentation professionnelle disponible 24 heures sur 24.</p></div>
+<div class="grid3">
+<article class="card reveal"><div class="icon">🎯</div><h3>Inspirer confiance</h3><p>Une présentation claire et moderne améliore immédiatement la crédibilité de votre activité.</p></article>
+<article class="card reveal"><div class="icon">📱</div><h3>Être visible sur mobile</h3><p>Votre site fonctionne correctement sur téléphone, tablette et ordinateur.</p></article>
+<article class="card reveal"><div class="icon">💬</div><h3>Recevoir des contacts</h3><p>Les visiteurs peuvent vous contacter facilement par formulaire, e-mail ou WhatsApp.</p></article>
+<article class="card reveal"><div class="icon">🔎</div><h3>Améliorer votre visibilité</h3><p>Une structure optimisée aide les moteurs de recherche à comprendre votre activité.</p></article>
+<article class="card reveal"><div class="icon">⚡</div><h3>Chargement rapide</h3><p>Une structure légère offre une navigation plus fluide et plus agréable.</p></article>
+<article class="card reveal"><div class="icon">🧩</div><h3>Solution évolutive</h3><p>Ajoutez plus tard des pages, produits, formulaires ou fonctionnalités.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section" id="contenu">
+<div class="container split">
+<div class="reveal">
+<span class="label">Ce que nous construisons</span>
+<h2>Un site adapté à votre activité et à vos clients</h2>
+<p>Le contenu, les couleurs, les sections et les appels à l’action sont organisés selon votre métier et vos objectifs.</p>
+<div class="list">
+<div><strong>Page d’accueil professionnelle</strong><p>Présentation rapide de votre activité et de votre valeur.</p></div>
+<div><strong>Présentation des services</strong><p>Des offres structurées et faciles à comprendre.</p></div>
+<div><strong>Section réalisations</strong><p>Vos projets ou références pour renforcer la confiance.</p></div>
+<div><strong>Contact et WhatsApp</strong><p>Des moyens simples pour recevoir des demandes.</p></div>
+</div>
+</div>
+<div class="visual reveal"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop" alt="Entreprise utilisant un site professionnel" loading="lazy"></div>
+</div>
+</section>
+
+<section class="section dark" id="methode">
+<div class="container">
+<div class="head reveal"><span class="label">Notre méthode</span><h2>Votre site réalisé en quatre étapes claires</h2></div>
+<div class="steps">
+<article class="step reveal"><div class="num">01</div><h3>Analyse</h3><p>Nous identifions votre activité, vos clients, vos services et vos objectifs.</p></article>
+<article class="step reveal"><div class="num">02</div><h3>Structure</h3><p>Nous organisons les pages, les sections et les messages essentiels.</p></article>
+<article class="step reveal"><div class="num">03</div><h3>Création</h3><p>Nous réalisons le design et le développement en vous montrant l’avancement.</p></article>
+<article class="step reveal"><div class="num">04</div><h3>Mise en ligne</h3><p>Le site est testé, publié et accompagné des explications nécessaires.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section" id="offre">
+<div class="container">
+<div class="head reveal"><span class="label">Offre site vitrine</span><h2>Une base professionnelle prête à représenter votre activité</h2></div>
+<div class="offer reveal">
+<h3>Site vitrine professionnel</h3>
+<p>Le tarif final dépend du contenu, du nombre de pages et des fonctionnalités demandées.</p>
+<div class="included">
+<div>Design personnalisé</div><div>Responsive mobile et tablette</div><div>Présentation des services</div><div>Formulaire de contact</div><div>Bouton WhatsApp</div><div>SEO de base</div><div>Mise en ligne accompagnée</div><div>Support après livraison</div>
+</div>
+<a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/21651649956?text=Bonjour%20Formationprot%2C%20je%20souhaite%20un%20devis%20personnalis%C3%A9%20pour%20un%20site%20vitrine.">Demander mon devis →</a>
+</div>
+</div>
+</section>
+
+<section class="section dark" id="faq">
+<div class="container">
+<div class="head reveal"><span class="label">Questions fréquentes</span><h2>Les réponses avant de commencer</h2></div>
+<div class="faq">
+<article class="reveal"><button class="q">Combien de pages peut contenir le site ? <span>+</span></button><div class="a"><p>Le nombre de pages dépend de vos besoins : accueil, services, réalisations, à propos et contact.</p></div></article>
+<article class="reveal"><button class="q">Le site fonctionnera-t-il sur téléphone ? <span>+</span></button><div class="a"><p>Oui. Chaque site est conçu pour les téléphones, tablettes et ordinateurs.</p></div></article>
+<article class="reveal"><button class="q">Pouvez-vous ajouter WhatsApp ? <span>+</span></button><div class="a"><p>Oui. Le bouton WhatsApp peut rester visible pendant la navigation.</p></div></article>
+<article class="reveal"><button class="q">Gérez-vous la mise en ligne ? <span>+</span></button><div class="a"><p>Oui. Formationprot peut vous accompagner pour le domaine, l’hébergement et la publication.</p></div></article>
+</div>
+</div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="title">
-      <span>Contenu démo</span>
-      <h2>Structure modifiable</h2>
-      <p>Ajoutez ici les détails du projet : besoin client, solution, fonctionnalités, images, résultat et bouton contact.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card"><div class="icon">🎯</div><h3>Objectif</h3><p>Présenter une entreprise avec un design moderne.</p></div>
-      <div class="card"><div class="icon">⚙️</div><h3>Fonctionnalités</h3><p>Accueil, services, contact, WhatsApp, responsive.</p></div>
-      <div class="card"><div class="icon">🚀</div><h3>Résultat</h3><p>Site rapide, professionnel et adapté mobile.</p></div>
-    </div>
-  </div>
+<div class="container">
+<div class="final reveal">
+<span class="label">Commençons votre site</span>
+<h2>Donnez à votre activité une image plus professionnelle</h2>
+<p>Envoyez quelques informations sur votre activité et recevez une première proposition adaptée.</p>
+<a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/21651649956?text=Bonjour%20Formationprot%2C%20je%20souhaite%20commencer%20mon%20site%20vitrine.">Parler sur WhatsApp →</a>
+</div>
+</div>
 </section>
+</main>
 
-<footer>© 2026 Formationprot — Démo projet ....</footer>
+<footer>
+<div class="container foot">
+<div><a class="logo" href="index.html"><b>FP</b><span>Formation<span>prot</span></span></a><p>Création de sites web, e-commerce, montage vidéo et solutions digitales en Tunisie.</p></div>
+<div class="col"><h3>Navigation</h3><a href="index.html">Accueil</a><a href="#avantages">Avantages</a><a href="#methode">Méthode</a><a href="#offre">Offre</a></div>
+<div class="col"><h3>Contact</h3><a href="mailto:formationprot@gmail.com">formationprot@gmail.com</a><a target="_blank" rel="noopener" href="https://wa.me/21651649956">+216 51 649 956</a></div>
+</div>
+<div class="container bottom"><span>© <span id="year"></span> Formationprot. Tous droits réservés.</span><a href="#">Retour en haut ↑</a></div>
+</footer>
 
+<a class="wa" target="_blank" rel="noopener" aria-label="WhatsApp" href="https://wa.me/21651649956?text=Bonjour%20Formationprot%2C%20je%20souhaite%20un%20site%20vitrine.">💬</a>
+
+<script>
+const t=document.getElementById("toggle"),m=document.getElementById("menu");
+t.onclick=()=>m.classList.toggle("open");
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>m.classList.remove("open"));
+document.querySelectorAll(".q").forEach(b=>b.onclick=()=>{const x=b.parentElement,o=x.classList.contains("active");document.querySelectorAll(".faq article").forEach(i=>i.classList.remove("active"));if(!o)x.classList.add("active")});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
