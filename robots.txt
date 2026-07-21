@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://formationprot.netlify.app/sitemap.xml
