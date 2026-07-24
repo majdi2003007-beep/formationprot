@@ -2444,6 +2444,73 @@ body {
 
 
 .skip-link{position:fixed;left:16px;top:-80px;z-index:2000;padding:12px 18px;border-radius:10px;background:#fff;color:#020617;font-weight:700;transition:.25s}.skip-link:focus{top:16px}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.service-card{display:flex;flex-direction:column}.service-card p{flex:1}.stats-section .stat-card strong{display:block;margin-bottom:7px;font-size:clamp(24px,3vw,42px);line-height:1.1;background:linear-gradient(90deg,#60a5fa,#22d3ee,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}.stats-section .stat-card span{color:var(--muted);font-size:12px;font-weight:600}.legal-note{margin-top:12px;color:var(--muted);font-size:11px;line-height:1.6}
+
+/* =========================================================
+   CORRECTION MOBILE DÉFINITIVE — INDEX FORMATIONPROT
+========================================================= */
+@media (max-width: 1050px) {
+  .hero-grid { grid-template-columns:minmax(0,1fr)!important; gap:48px!important; }
+  .hero-content,.hero-visual { width:100%!important; max-width:100%!important; min-width:0!important; }
+  .hero-content { order:1; }
+  .hero-visual { order:2; margin-inline:auto; }
+  .browser-card { width:100%!important; max-width:700px!important; margin-inline:auto!important; transform:none!important; }
+}
+@media (max-width: 650px) {
+  html,body { width:100%!important; max-width:100%!important; overflow-x:hidden!important; }
+  .container { width:100%!important; max-width:100%!important; padding-inline:15px!important; margin-inline:auto!important; }
+  .nav { min-height:72px!important; gap:10px!important; }
+  .logo { min-width:0!important; gap:8px!important; }
+  .logo-icon { width:42px!important; height:42px!important; flex:0 0 42px!important; font-size:16px!important; }
+  .logo-text { min-width:0!important; font-size:18px!important; white-space:nowrap!important; }
+  .menu-toggle { display:block!important; flex:0 0 46px!important; margin-left:auto!important; }
+  .menu { position:absolute!important; top:calc(100% + 8px)!important; left:15px!important; right:15px!important; width:auto!important; }
+  .hero { width:100%!important; min-height:auto!important; padding-top:calc(var(--header-height) + 38px)!important; padding-bottom:58px!important; overflow:hidden!important; }
+  .hero-grid { width:100%!important; max-width:100%!important; display:grid!important; grid-template-columns:minmax(0,1fr)!important; gap:34px!important; }
+  .hero-content { width:100%!important; max-width:100%!important; min-width:0!important; text-align:center!important; overflow:visible!important; }
+  .hero-badge { max-width:100%!important; margin-inline:auto!important; padding:8px 12px!important; font-size:11px!important; white-space:normal!important; text-align:center!important; }
+  .hero h1 { width:100%!important; max-width:100%!important; margin-inline:auto!important; font-size:clamp(33px,10vw,40px)!important; line-height:1.08!important; letter-spacing:-1.4px!important; overflow-wrap:normal!important; word-break:normal!important; hyphens:none!important; text-wrap:balance!important; }
+  .gradient-text { display:inline!important; }
+  .hero-description { width:100%!important; max-width:560px!important; margin-inline:auto!important; font-size:14px!important; line-height:1.7!important; }
+  .hero-actions { width:100%!important; flex-direction:column!important; align-items:stretch!important; gap:12px!important; margin-top:26px!important; }
+  .hero-actions .btn { width:100%!important; max-width:100%!important; }
+  .hero-benefits { width:100%!important; flex-direction:column!important; align-items:stretch!important; justify-content:flex-start!important; gap:10px!important; }
+  .hero-benefits>div { width:100%!important; justify-content:flex-start!important; text-align:left!important; }
+  .hero-visual { width:100%!important; max-width:100%!important; min-width:0!important; min-height:auto!important; display:block!important; overflow:visible!important; }
+  .browser-card { width:100%!important; max-width:100%!important; min-width:0!important; margin:0 auto!important; transform:none!important; border-radius:18px!important; }
+  .browser-top { height:46px!important; gap:10px!important; padding:0 12px!important; }
+  .browser-address { min-width:0!important; max-width:none!important; overflow:hidden!important; white-space:nowrap!important; text-overflow:ellipsis!important; }
+  .browser-content { width:100%!important; max-width:100%!important; min-width:0!important; min-height:270px!important; padding:15px 10px!important; overflow:hidden!important; }
+  .mini-header { gap:8px!important; }
+  .mini-menu { min-width:0!important; overflow:hidden!important; }
+  .mini-menu span { width:20px!important; flex:0 0 20px!important; }
+  .mini-hero { width:100%!important; padding:32px 2px 22px!important; }
+  .mini-hero h2 { width:100%!important; max-width:100%!important; font-size:20px!important; line-height:1.25!important; overflow-wrap:normal!important; word-break:normal!important; }
+  .mini-buttons { gap:8px!important; }
+  .mini-buttons span { width:min(38%,95px)!important; }
+  .mini-cards { grid-template-columns:repeat(3,minmax(0,1fr))!important; gap:7px!important; }
+  .mini-cards div { min-width:0!important; height:50px!important; }
+  .floating-card { display:none!important; }
+  .section { padding:72px 0!important; }
+  .trust-content { min-height:auto!important; padding:28px 0!important; }
+  .trust-items { width:100%!important; }
+  .stats-grid,.services-grid,.projects-grid,.reels-grid,.process-grid,.testimonials-grid,.why-grid,.contact-grid,.footer-grid,.form-row,.final-cta-card { grid-template-columns:minmax(0,1fr)!important; }
+  .service-card,.project-card,.reel-card,.process-card,.testimonial-card,.contact-form,.why-item,.final-cta-card { width:100%!important; max-width:100%!important; min-width:0!important; }
+  .section-heading h2,.why-content h2,.contact-content h2 { font-size:30px!important; line-height:1.18!important; letter-spacing:-1px!important; }
+  .why-image-card img { height:360px!important; }
+  .quality-card { position:relative!important; inset:auto!important; width:calc(100% - 24px)!important; margin:-25px 12px 0!important; }
+  .video-wrapper video { width:100%!important; height:auto!important; aspect-ratio:9/16!important; max-height:520px!important; }
+  .contact-form { padding:20px!important; }
+  .footer-brand,.footer-column:last-child,.testimonial-card:last-child { grid-column:auto!important; }
+  .footer-bottom { flex-direction:column!important; align-items:flex-start!important; }
+  .final-cta-card { padding:28px 20px!important; }
+}
+@media (max-width:390px) {
+  .container { padding-inline:12px!important; }
+  .logo-text { font-size:17px!important; }
+  .hero h1 { font-size:33px!important; }
+  .browser-content { padding-inline:8px!important; }
+}
+
 </style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formationprot.netlify.app/#organization","name":"Formationprot","url":"https://formationprot.netlify.app/","email":"formationprot@gmail.com","telephone":"+21651649956","contactPoint":{"@type":"ContactPoint","telephone":"+21651649956","contactType":"customer service","areaServed":"TN","availableLanguage":["fr","ar"]}},{"@type":"WebSite","@id":"https://formationprot.netlify.app/#website","url":"https://formationprot.netlify.app/","name":"Formationprot","inLanguage":"fr-TN","publisher":{"@id":"https://formationprot.netlify.app/#organization"}},{"@type":"ProfessionalService","@id":"https://formationprot.netlify.app/#business","name":"Formationprot","url":"https://formationprot.netlify.app/","email":"formationprot@gmail.com","telephone":"+21651649956","areaServed":{"@type":"Country","name":"Tunisie"},"description":"Création de sites web, boutiques e-commerce, montage vidéo, Reels et solutions digitales professionnelles en Tunisie.","provider":{"@id":"https://formationprot.netlify.app/#organization"}},{"@type":"Service","name":"Création de sites web en Tunisie","serviceType":"Création de sites web et boutiques e-commerce","areaServed":{"@type":"Country","name":"Tunisie"},"provider":{"@id":"https://formationprot.netlify.app/#business"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Combien coûte la création d’un site web en Tunisie ?","acceptedAnswer":{"@type":"Answer","text":"Le prix dépend du nombre de pages, des fonctionnalités, du design et du contenu. Formationprot fournit un devis adapté après analyse du besoin."}},{"@type":"Question","name":"Le site fonctionne-t-il sur téléphone ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Chaque site est conçu pour fonctionner sur mobile, tablette et ordinateur."}},{"@type":"Question","name":"Pouvez-vous optimiser mon site pour Google ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Formationprot optimise la structure HTML, les titres, les descriptions, la vitesse, le contenu et le maillage interne."}},{"@type":"Question","name":"Comment démarrer un projet avec Formationprot ?","acceptedAnswer":{"@type":"Answer","text":"Contactez Formationprot par WhatsApp ou via le formulaire afin de recevoir une proposition, un délai et un prix."}}]}]}</script>
 <meta content="telephone=no" name="format-detection"/>
 <meta content="TN" name="geo.region"/>
